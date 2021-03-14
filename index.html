@@ -3,87 +3,187 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/utilities.css">
+    <link rel="stylesheet" type="text/css" href="https://rdbende.github.io/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://rdbende.github.io/css/utils.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
     <title>Tkinter docs</title>
 </head>
 <body>
     <div class="navbar" id="navbar">
-        <div class="container flex">
-            <a href="index.html">Tkinter docs logo</a>
+        <div class="flex">
+            <a class="logo" href="https://rdbende.github.io/index.html" title="Home"><img src="https://rdbende.github.io/images/logo.png"></a>
             <nav>
                 <ul>
-                    <li><a href="#"><strong>Link 1</strong></a></li>
-                    <li><a href="#"><strong>Link 2</strong></a></li>
-                    </ul>
-                </nav>
+                    <li><a href="https://rdbende.github.io/widgets/" title="Widgets"><strong>Widgets</strong></a></li>
+                    <li><a href="#" title="Link 2"><strong>Link 2</strong></a></li>
+                </ul>
+            </nav>
         </div>
     </div>
     
-    <div class="main">
-        <div class="container">
-            <table>
-                <tr>
-                    <td width="70%">
-                        <h1 class="md text-left my-2">What is Tkinter?</h1>
-                        <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem urna, vehicula nec justo nec, mollis dignissim tellus. Vestibulum porttitor sodales iaculis. Aliquam nec nunc in metus vulputate dapibus. Aliquam erat volutpat. Phasellus eleifend eget mi non condimentum. Proin tincidunt convallis sagittis. Nullam justo ipsum, porta a lacus nec, hendrerit dictum metus. Sed pharetra nisl id fringilla sagittis. Nulla eleifend sodales laoreet. Sed eu neque et neque facilisis malesuada id ac metus. Duis tincidunt elit ultrices ex convallis posuere. Nunc ligula eros, condimentum eu massa ac, auctor viverra libero. Integer bibendum ac mi sit amet vulputate.</p>
+    <div class="container-main">
+        <div class="row">
+            <div class="column-60">
+                <h1 class="md text-left">What is Tkinter?</h1>
+                <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem urna, vehicula nec justo nec, mollis dignissim tellus. Vestibulum porttitor sodales iaculis. Aliquam nec nunc in metus vulputate dapibus. Aliquam erat volutpat. Phasellus eleifend eget mi non condimentum. Proin tincidunt convallis sagittis. Nullam justo ipsum, porta a lacus nec, hendrerit dictum metus. Sed pharetra nisl id fringilla sagittis. Nulla eleifend sodales laoreet. Sed eu neque et neque facilisis malesuada id ac metus. Duis tincidunt elit ultrices ex convallis posuere. Nunc ligula eros, condimentum eu massa ac, auctor viverra libero. Integer bibendum ac mi sit amet vulputate.</p>
 
-                        <p style="text-align: justify;">Etiam sed bibendum ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus pellentesque justo in ex accumsan luctus. Quisque elementum fringilla tincidunt. Aliquam interdum ullamcorper orci in tincidunt. Proin non semper nisl, et elementum enim. Quisque rutrum accumsan mi malesuada blandit. Suspendisse id consectetur sapien.</p>
+                <p style="text-align: justify;">Etiam sed bibendum ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus pellentesque justo in ex accumsan luctus. Quisque elementum fringilla tincidunt. Aliquam interdum ullamcorper orci in tincidunt. Proin non semper nisl, et elementum enim. Quisque rutrum accumsan mi malesuada blandit. Suspendisse id consectetur sapien.</p>
 
-                        <p style="text-align: justify;">Donec rutrum purus magna, sed convallis diam vehicula ac. Fusce vitae rhoncus mi, sit amet tincidunt leo. Donec congue suscipit augue sed dictum. Etiam eu vehicula dolor. In consectetur, risus faucibus commodo efficitur, velit massa commodo sem, ut lobortis ex nisl non tortor. Curabitur sed laoreet risus. Mauris in porttitor tortor. Cras sed tempor nulla, id tempor nisl. Quisque ac posuere justo.</p>
-                    </td>
-                    <td width="30%">
-                        <div class="card" style="height: 400px">
-                            <a href="#"><strong>Link 1</strong></a><br>
-                            <a href="#"><strong>Link 2</strong></a><br>
-                            <a href="#"><strong>Link 3</strong></a><br>
-                            <a href="#"><strong>Link 4</strong></a><br>
-                            <a href="#"><strong>Link 5</strong></a><br>
-                            <a href="#"><strong>Link 6</strong></a><br>
-                            <a href="#"><strong>Link 7</strong></a><br>
-                            <a href="#"><button class="btn-outline">Button</button></a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <h2 class="md text-center my-2">
-                            Main widgets
-                        </h2>
-                            <div class="container flex">
-                            <a href="#"><div class="card">
-                                <h4>tk.Tk</h4>
-                            </div></a>
-                            <a href="#"><div class="card">
-                                <h4>tk.Toplevel</h4>
-                            </div></a>
-                            <a href="#"><div class="card">
-                                <h4>tk.Frame</h4>
-                            </div></a>
-                            <a href="#"><div class="card">
-                                <h4>tk.Label</h4>
-                            </div></a>
-                            <a href="#"><div class="card">
-                                <h4>tk.Button</h4>
-                            </div></a>
-                            <a href="#"><div class="card">
-                                <h4>tk.Entry</h4>
-                            </div></a>
-                            <a href="#"><div class="card">
-                                <h4>tk.Radiobutton</h4>
-                            </div></a>
-                            <a href="#"><div class="card">
-                                <h4>tk.Checkbutton</h4>
-                            </div></a>
-                        </div>
-                    </td>
-                </tr>
-            </table>
+                <p style="text-align: justify;">Donec rutrum purus magna, sed convallis diam vehicula ac. Fusce vitae rhoncus mi, sit amet tincidunt leo. Donec congue suscipit augue sed dictum. Etiam eu vehicula dolor. In consectetur, risus faucibus commodo efficitur, velit massa commodo sem, ut lobortis ex nisl non tortor. Curabitur sed laoreet risus. Mauris in porttitor tortor. Cras sed tempor nulla, id tempor nisl. Quisque ac posuere justo.</p>
+            </div>
+            <div class="column-40">
+                <div class="card" style="height: 470px;">
+                    <h2 style="font-weight: 700">Find docs quickly</h2>
+                    <input type="text" id="searchBar" onkeyup="searchFunc()" placeholder="Search" title="Search the docs">
+
+                    <ul class="searchUl" id="searchUl">
+                        <li><a href="widgets/tk.html">Tk</a></li>
+                        <li><a href="#">Toplevel</a></li>
+                        <li><a href="#">Frame</a></li>
+                        <li><a href="#">LabelFrame</a></li>
+                        <li><a href="#">Label</a></li>
+                        <li><a href="#">Message</a></li>
+                        <li><a href="#">Button</a></li>
+                        <li><a href="#">Entry</a></li>
+                        <li><a href="#">Checkbutton</a></li>
+                        <li><a href="#">Radiobutton</a></li>
+                        <li><a href="#">Text</a></li>
+                        <li><a href="#">Scale</a></li>
+                        <li><a href="#">LabeledScale</a></li>
+                        <li><a href="#">Combobox</a></li>
+                        <li><a href="#">Spinbox</a></li>
+                        <li><a href="#">Scrollbar</a></li>
+                        <li><a href="#">Progressbar</a></li>
+                        <li><a href="#">Canvas</a></li>
+                        <li><a href="#">Listbox</a></li>
+                        <li><a href="#">PanedWindow</a></li>
+                        <li><a href="#">Notebook</a></li>
+                        <li><a href="#">Treeview</a></li>
+                        <li><a href="#">Menus</a></li>
+                        <li><a href="#">Menubutton</a></li>
+                        <li><a href="#">OptionMenu</a></li>
+                        <li><a href="#">Separator</a></li>
+                        <li><a href="#">Sizegrip</a></li>
+                        <li><a href="#">PhotoImage</a></li>
+                        <li><a href="#">BitmapImage</a></li>
+                        <li><a href="#">Pack</a></li>
+                        <li><a href="#">Grid</a></li>
+                        <li><a href="#">Place</a></li>
+                        <li><a href="#">IntVar</a></li>
+                        <li><a href="#">StringVar</a></li>
+                        <li><a href="#">DoubleVar</a></li>
+                        <li><a href="#">BooleanVar</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Style</a></li>
+                        <li><a href="#">ScrolledText</a></li>
+                        <li><a href="#">Font</a></li>
+                        <li><a href="#">Messageboxes</a></li>
+                        <li><a href="#">Filedialog</a></li>
+                        <li><a href="#">Simpledialog</a></li>
+                        <li><a href="#">Commondialog</a></li>
+                        <li><a href="#">Colorchooser</a></li>
+                        <li><a href="#">Fontchooser</a></li>
+                        <li><a href="#">Dnd</a></li>
+                        <li><a href="#">Tix</a></li>
+                    </ul>
+
+                    <script>
+                    function searchFunc() {
+                        var input, filter, ul, li, a, i, txtValue;
+                        input = document.getElementById("searchBar");
+                        filter = input.value.toUpperCase();
+                        ul = document.getElementById("searchUl");
+                        li = ul.getElementsByTagName("li");
+                        for (i = 0; i < li.length; i++) {
+                            a = li[i].getElementsByTagName("a")[0];
+                            txtValue = a.textContent || a.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                li[i].style.display = "";
+                            } else {
+                                li[i].style.display = "none";
+                            }
+                        }
+                    }
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="container">
+                <h1 class="md text-center my-2">Main widgets</h1>
+                <div class="row">
+                    <div class="column-50">
+                        <a href="widgets/tk.html"><div class="card-btn">
+                            <p class="title">tk.Tk</p>
+                            <p class="desc">A window</p>
+                        </div></a>
+                        <a href="#"><div class="card-btn col-1">
+                            <p class="title">tk.Frame</p>
+                            <p class="desc">Container for other widgets</p>
+                        </div></a>
+                        <a href="#"><div class="card-btn col-1">
+                            <p class="title">tk.Label</p>
+                            <p class="desc">Inline text display</p>
+                        </div></a>
+                        <a href="#"><div class="card-btn col-1">
+                            <p class="title">tk.Button</p>
+                            <p class="desc">Just a simple button</p>
+                        </div></a>
+                        <a href="#"><div class="card-btn col-1">
+                            <p class="title">tk.Entry</p>
+                            <p class="desc">Inline text input</p>
+                        </div></a>
+                        <a href="#"><div class="card-btn col-1">
+                            <p class="title">tk.Checkbutton</p>
+                            <p class="desc">A checkbox</p>
+                        </div></a>
+                        <a href="#"><div class="card-btn col-1">
+                            <p class="title">tk.Radiobutton</p>
+                            <p class="desc">A radiobutton</p>
+                        </div></a>
+                    </div>
+                    <div class="column-50">
+                        <a href="#"><div class="card-btn col-2">
+                            <p class="title">tk.Toplevel</p>
+                            <p class="desc">A toplevel window</p>
+                        </div></a>
+                        <a href="#"><div class="card-btn col-2">
+                            <p class="title">ttk.Frame</p>
+                            <p class="desc">Container for other widgets</p>
+                        </div></a>
+                        <a href="#"><div class="card-btn col-2">
+                            <p class="title">ttk.Label</p>
+                            <p class="desc">Inline text display</p>
+                        </div></a>
+                        <a href="#"><div class="card-btn col-2">
+                            <p class="title">ttk.Button</p>
+                            <p class="desc">A themeable button</p>
+                        </div></a>
+                        <a href="#"><div class="card-btn col-2">
+                            <p class="title">ttk.Entry</p>
+                            <p class="desc">Themeable text input</p>
+                        </div></a>
+                        <a href="#"><div class="card-btn col-2">
+                            <p class="title">ttk.Checkbutton</p>
+                            <p class="desc">A themeable checkbox</p>
+                        </div></a>
+                        <a href="#"><div class="card-btn col-2">
+                            <p class="title">ttk.Radiobutton</p>
+                            <p class="desc">A themeable radiobutton</p>
+                        </div></a>
+                   </div> 
+                </div>
+            </div>
         </div>
     </div>
-        <footer class="footer bg-dark py-1">
-            <p class="text-right" style="padding-right: 20px"><a href="https://github.com/rdbende">Copyright &copy; 2021 rdbende</a></p>
-        </footer>
+    <footer class="footer bg-dark">
+        <div>
+            <p>Copyright &copy; 2021 rdbende</p>
+        </div>
+        <div class="github">
+            <a href="https://github.com/rdbende/tkinter-docs/"><i class="fab fa-github fa-2x"></i></a>
+        </div>
+    </footer>
     <script>
         window.onscroll = function() {scrollFunc()};
 
@@ -97,6 +197,8 @@
             navbar.classList.remove("sticky");
           }
         }
+
+        scrollFunc()
     </script>
 </body>
 </html>
