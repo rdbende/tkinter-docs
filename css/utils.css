@@ -1,16 +1,52 @@
+.container-main {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 80px 40px 40px 40px
+}
+
 .container {
-  max-width: 1300px;
-  margin: 0 auto;
-  overflow: auto;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 40px
 }
 
 .card {
   background-color: #fff;
   color: #333;
   border-radius: 10px;
-  box-shadow: 0 2px 10px 0 rgb(0 0 0 / 35%);
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 35%);
   padding: 20px;
   margin: 10px;
+}
+
+.card-btn {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 35%);
+  padding: 10px 20px;
+  margin: 25px 10px;
+  transition: 0.3s;
+  display: block;
+  justify-content: space-between;
+}
+
+.card-btn .title {
+  color: #333;
+  font-size: 20px;
+  font-weight: 700;
+  display: inline-flex;
+  word-break: break-all;
+}
+
+.card-btn .desc {
+  color: #777;
+  display: inline-flex;
+  padding-right: 50px;
+  word-break: break-all;
+}
+
+.card-btn:hover {
+  transform: scale(1.02);
 }
 
 .btn {
@@ -26,12 +62,12 @@
 
 .btn-outline {
   display: inline-block;
-  padding: 10px 30px;
+  padding: 9px 29px;
   cursor: pointer;
-  background-color: transparent;
+  background-color: #ccc;
   color: #333;
   border-radius: 5px;
-  border: 2px #007fff solid;
+  border: 1px transparent solid;
   transition: 0.2s;
 }
 
@@ -40,32 +76,57 @@
 }
 
 .btn-outline:hover {
-  background-color: #ccc;
-  border: 2px #ccc solid;
+  border: 1px #777 solid;
 }
 
 .bg-dark {
   background-color: #333;
+  color: #fff;
 }
 
 .bg-dark a {
   color: #fff;
 }
 
+.searchUl {
+  list-style-type: none;
+  overflow: auto;
+  max-height: 75%;
+  padding: 10px 15px 10px 10px;
+}
+
+.searchUl li a {
+  padding: 5px 5px 5px 12px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  display: block
+}
+
+.searchUl li a:hover:not(.header) {
+  background-color: #ccc;
+  box-shadow: 0px 0px 8px 3px rgb(0 0 0 / 35%);
+  border-radius: 5px;
+  border: none;
+}
+
 .sm {
-  font-size: 1rem;
+  font-size: 12pt;
 }
 
 .md {
-  font-size: 2rem;
+  font-size: 24pt;
 }
 
 .lg {
-  font-size: 3rem;
+  font-size: 30pt;
+  font-weight: 700;
 }
 
 .xl {
-  font-size: 4rem;
+  font-size: 40pt;
+  font-weight: 700;
 }
 
 .text-center {
@@ -85,19 +146,6 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.grid-3 {
-  grid-template-columns: repeat(3, 1fr);
 }
 
 .my-1 {
