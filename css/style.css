@@ -10,6 +10,40 @@ body {
   line-height: 1.6;
 }
 
+input {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  color: #333;
+  border-radius: 5px;
+  border: 2px #ccc solid;
+  transition: 0.2s;
+}
+
+::placeholder {
+  color: #777;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #777;
+}
+
+::-ms-input-placeholder {
+  color: #777;
+}
+
+input:hover {
+  border: 2px #777 solid;
+}
+
+input:focus {
+  outline: none;
+  border: 2px #007fff solid;
+}
+
 ul {
   list-style-type: none;
 }
@@ -22,8 +56,6 @@ a {
 h1,
 h2 {
   font-weight: 300;
-  line-height: 1.2;
-  margin: 10px 0;
 }
 
 th,
@@ -35,24 +67,49 @@ p {
   margin: 10px 0;
 }
 
-code,
 pre {
+  display: block;
   background: #e6e6e6;
   color: #333;
-  padding: 5px;
-  border-radius: 10px
+  padding: 20px;
+  border-radius: 10px;
+  font-family: monospace;
+  white-space: pre;
+  text-align: left;
+  min-width: 25%;
 }
 
 ::-moz-selection {
   background: #007fff;
+  color: #fff;
 }
 
 ::selection {
   background: #007fff;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 5px;
+  
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
 }
 
 .main {
-  padding: 80px 60px 60px 60px;
+  width: 100%;
 }
 
 .sticky {
@@ -66,7 +123,9 @@ pre {
   color: #fff;
   height: 70px;
   width: 100%;
-  box-shadow: 0 2px 10px 0 rgb(0 0 0 / 10%), inset 0 -1px 0 0 #ddd;
+  padding-right: 40px;
+  padding-left: 40px;
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
 }
 
 .navbar ul {
@@ -76,12 +135,17 @@ pre {
 .navbar a {
   color: #777;
   padding: 10px;
-  margin: 0 5px;
+  margin: 0 10px;
   transition: 0.3s;
 }
 
 .navbar a:hover {
   color: #000;
+}
+
+.navbar .logo {
+  height: 100%;
+  padding: 20px
 }
 
 .navbar .flex {
@@ -90,18 +154,56 @@ pre {
 
 .footer {
   width: 100%;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
 }
 
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+.footer p {
+  margin: 15px;
+}
+
+.footer .github {
+  margin: 10px;
+}
+
+.column-40 {
+  float: left;
+  width: 40%;
+  padding: 20px;
+}
+
+.column-50 {
+  float: left;
+  width: 50%;
+  padding: 20px;
+}
+
+.column-60 {
+  float: left;
+  width: 60%;
+  padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 768px) {
+  .column-40,
+  .column-50,
+  .column-60 {
+    width: 100%;
   }
 }
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 550px) {
   .navbar {
-    height: 110px;
+    height: 120px;
   }
 
   .navbar .flex {
@@ -110,6 +212,5 @@ pre {
 
   .navbar ul {
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.1);
   }
 }
