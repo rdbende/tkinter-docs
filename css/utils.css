@@ -1,20 +1,21 @@
 .container-main {
   max-width: 100%;
   overflow: hidden;
-  padding: 80px 40px 40px 40px
+  margin: 20px 30px 60px 30px
 }
 
 .container {
   max-width: 100%;
   overflow: hidden;
-  padding: 40px
+  padding: 20px
 }
 
 .card {
   background-color: #fff;
   color: #333;
   border-radius: 10px;
-  box-shadow: 0 0 10px 0 rgb(0 0 0 / 35%);
+  border: 1px #ccc solid;
+  box-shadow: 0 0 20px 5px rgb(0 0 0 / 10%);
   padding: 20px;
   margin: 10px;
 }
@@ -22,31 +23,34 @@
 .card-btn {
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 0 10px 0 rgb(0 0 0 / 35%);
-  padding: 10px 20px;
-  margin: 25px 10px;
+  border: 1px #ccc solid;
+  min-height: 100px;
+  max-height: 200px;
+  box-shadow: 0 0 10px 5px rgb(0 0 0 / 5%);
+  padding: 10px 30px;
+  margin: 30px;
   transition: 0.3s;
   display: block;
   justify-content: space-between;
+  word-wrap: normal;
 }
 
 .card-btn .title {
   color: #333;
   font-size: 20px;
   font-weight: 700;
-  display: inline-flex;
-  word-break: break-all;
+  word-break: normal;
 }
 
 .card-btn .desc {
   color: #777;
-  display: inline-flex;
-  padding-right: 50px;
-  word-break: break-all;
+  font-size: 14px;
+  font-weight: 600;
+  word-break: normal;
 }
 
 .card-btn:hover {
-  transform: scale(1.02);
+  background-color: #eee;
 }
 
 .btn {
@@ -88,45 +92,34 @@
   color: #fff;
 }
 
-.searchUl {
+.nav-ul {
   list-style-type: none;
   overflow: auto;
   max-height: 75%;
-  padding: 10px 15px 10px 10px;
+  padding: 10px 15px 10px 0;
 }
 
-.searchUl li a {
+.nav-ul li a {
   padding: 5px 5px 5px 12px;
   text-decoration: none;
   font-size: 16px;
   font-weight: 700;
   color: #333;
-  display: block
+  display: block;
+  border: 1px solid transparent;
+  transition: 0.2s;
 }
 
-.searchUl li a:hover:not(.header) {
-  background-color: #ccc;
-  box-shadow: 0px 0px 8px 3px rgb(0 0 0 / 35%);
+.nav-ul li a:hover:not(.header) {
+  background-color: #eee;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  border: none;
+  transition: 0.6s;
 }
 
-.sm {
-  font-size: 12pt;
-}
-
-.md {
-  font-size: 24pt;
-}
-
-.lg {
-  font-size: 30pt;
-  font-weight: 700;
-}
-
-.xl {
-  font-size: 40pt;
-  font-weight: 700;
+.nav-title {
+  margin: 10px 0 30px 0;
+  text-align: center;
 }
 
 .text-center {
@@ -141,6 +134,12 @@
   text-align: right;
 }
 
+.page-title {
+  text-align: center;
+  font-weight: 700;
+  margin: 10px 0 20px 0;
+}
+
 .flex {
   display: flex;
   justify-content: center;
@@ -148,82 +147,8 @@
   height: 100%;
 }
 
-.my-1 {
-  margin: 1rem 0;
-}
-
-.my-2 {
-  margin: 1.5rem 0;
-}
-
-.my-3 {
-  margin: 2rem 0;
-}
-
-.my-4 {
-  margin: 3rem 0;
-}
-
-.my-5 {
-  margin: 4rem 0;
-}
-
-.m-1 {
-  margin: 1rem;
-}
-
-.m-2 {
-  margin: 1.5rem;
-}
-
-.m-3 {
-  margin: 2rem;
-}
-
-.m-4 {
-  margin: 3rem;
-}
-
-.m-5 {
-  margin: 4rem;
-}
-
-.py-1 {
-  padding: 1rem 0;
-}
-
-.py-2 {
-  padding: 1.5rem 0;
-}
-
-.py-3 {
-  padding: 2rem 0;
-}
-
-.py-4 {
-  padding: 3rem 0;
-}
-
-.py-5 {
-  padding: 4rem 0;
-}
-
-.p-1 {
-  padding: 1rem;
-}
-
-.p-2 {
-  padding: 1.5rem;
-}
-
-.p-3 {
-  padding: 2rem;
-}
-
-.p-4 {
-  padding: 3rem;
-}
-
-.p-5 {
-  padding: 4rem;
+@media screen and (max-width: 900px) {
+  .card-btn {
+    min-height: 150px;
+  }
 }

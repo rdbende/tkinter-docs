@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="E:/tkinter-docs/css/style.css">
+    <link rel="stylesheet" type="text/css" href="E:/tkinter-docs/css/utils.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
+    <title>Widget documentations | Tkinter docs</title>
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <div class="flex">
+            <a class="logo" href="E:/tkinter-docs/index.html" title="Home"><img src="E:/tkinter-docs/images/logo.png"></a>
+            <nav>
+                <ul>
+                    <li><a href="E:/tkinter-docs/tutorials/" title="Tutorials"><strong>Tutorials</strong></a></li>
+                    <li><a href="E:/tkinter-docs/docs/" title="Docs"><strong>Docs</strong></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="container-main">
+        <div class="row">
+            <div class="column-33">
+                <a href="E:/tkinter-docs/tutorials/tk.html"><div class="card-btn">
+                    <p class="title">tk.Tk</p>
+                    <p class="desc">Tkinter's main window</p>
+                </div></a>
+                <a href="#"><div class="card-btn">
+                    <p class="title">ttk.Entry</p>
+                    <p class="desc">Inline text input</p>
+                </div></a>
+                <a href="#"><div class="card-btn">
+                    <p class="title">ttk.Combobox</p>
+                    <p class="desc">Combo dropdown</p>
+                </div></a>
+            </div>
+            <div class="column-33">
+                <a href="#"><div class="card-btn">
+                    <p class="title">ttk.Label</p>
+                    <p class="desc">Inline text display</p>
+                </div></a>
+                <a href="#"><div class="card-btn">
+                    <p class="title">ttk.Checkbutton</p>
+                    <p class="desc">Button for on/off</p>
+                </div></a>
+                <a href="#"><div class="card-btn">
+                    <p class="title">ttk.Spinbox</p>
+                    <p class="desc">Select from range</p>
+                </div></a>
+           </div>
+           <div class="column-33">
+                <a href="#"><div class="card-btn">
+                    <p class="title">ttk.Button</p>
+                    <p class="desc">Just a simple button</p>
+                </div></a>
+                <a href="#"><div class="card-btn">
+                    <p class="title">ttk.Radiobutton</p>
+                    <p class="desc">Select from multiple options</p>
+                </div></a>
+                <a href="#"><div class="card-btn">
+                    <p class="title">ttk.Scale</p>
+                    <p class="desc">Tkinter's slider widget</p>
+                </div></a>
+           </div> 
+        </div>
+    </div>
+    <footer class="footer bg-dark">
+        <div>
+            <p>Copyright &copy; 2021 rdbende</p>
+        </div>
+        <div class="github">
+            <a href="https://github.com/rdbende/tkinter-docs/"><i class="fab fa-github fa-2x"></i></a>
+        </div>
+    </footer>
+    <script>
+        window.onscroll = function() {scrollFunc()};
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function scrollFunc() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+    scrollFunc()
+</script>
+</body>
+</html>
