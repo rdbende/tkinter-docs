@@ -1,7 +1,6 @@
 # A better tkinter documentation
 
-#### I started this page because despite the fact that tkinter is one of the most popular Python GUI frameworks, most of the documentation is only very superficial ([or it's on hiatus](https://effbot.org/) 😕). A lot can only be learned from the source code or from the Tcl manual page.<br>So I want to change the fact that if someone gets stuck using tkinter, or just wants to know more about it, don’t start asking questions on StackOverflow or Reddit, instead have a page where you can find all the information you need, in detail and in tkinter format.
-#### Secondly I also want to do a detailed documentation for tkinter extensions (e.g. tkcalendar, ttkwidgets, ttkthemes, etc.)
+#### I started this page because despite the fact that tkinter is one of the most popular Python GUI frameworks, most of the documentation is only very superficial ([or it's on hiatus](https://effbot.org/) 😕). A lot can only be learned from the source code or from the Tcl manual page.<br>So I want to change the fact that if someone gets stuck using tkinter, or just wants to know more about it, don’t start asking questions on StackOverflow or Reddit, instead have a page where you can find all the information you need, in detail and in tkinter format. <br>Secondly I also want to make a detailed documentation for tkinter extensions (e.g. tkcalendar, ttkwidgets, ttkthemes, etc.)
 
 #### It's a very big job, if you can and want to help in any format, please drop me an email: rdbende@gmail.com!
 
