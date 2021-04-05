@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://rdbende.github.io/tkinter-docs/css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://rdbende.github.io/tkinter-docs/css/utils.css">
+    <link rel="stylesheet" type="text/css" href="E:/tkinter-docs/css/style.css">
+    <link rel="stylesheet" type="text/css" href="E:/tkinter-docs/css/utils.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
     <title>Tkinter docs</title>
 </head>
 <body>
     <div class="navbar" id="navbar">
         <div class="flex">
-            <a class="logo" href="https://rdbende.github.io/tkinter-docs/index.html" title="Home"><img src="https://rdbende.github.io/tkinter-docs/images/logo.png"></a>
+            <a class="logo" href="E:/tkinter-docs/index.html" title="Home"><img src="E:/tkinter-docs/images/logo.png"></a>
             <nav>
                 <ul>
-                    <li><a href="https://rdbende.github.io/tkinter-docs/widgets/" title="Widgets"><strong>Widgets</strong></a></li>
-                    <li><a href="#" title="Link 2"><strong>Link 2</strong></a></li>
+                    <li><a href="E:/tkinter-docs/tutorials/" title="Tutorials"><strong>Tutorials</strong></a></li>
+                    <li><a href="E:/tkinter-docs/docs/" title="Docs"><strong>Docs</strong></a></li>
                 </ul>
             </nav>
         </div>
@@ -23,68 +23,70 @@
     
     <div class="container-main">
         <div class="row">
-            <div class="column-60">
-                <h1 class="md text-left">What is Tkinter?</h1>
-                <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem urna, vehicula nec justo nec, mollis dignissim tellus. Vestibulum porttitor sodales iaculis. Aliquam nec nunc in metus vulputate dapibus. Aliquam erat volutpat. Phasellus eleifend eget mi non condimentum. Proin tincidunt convallis sagittis. Nullam justo ipsum, porta a lacus nec, hendrerit dictum metus. Sed pharetra nisl id fringilla sagittis. Nulla eleifend sodales laoreet. Sed eu neque et neque facilisis malesuada id ac metus. Duis tincidunt elit ultrices ex convallis posuere. Nunc ligula eros, condimentum eu massa ac, auctor viverra libero. Integer bibendum ac mi sit amet vulputate.</p>
+            <div class="column-67">
+                <h1>What is Tkinter?</h1>
+                <p style="text-align: justify;"><b>Here should be a short, but detailed summary of what tkinter is, where does it come from, its disadvantages, advantages, portability, etc., <br>and also an introduction to tkinter programming, why use ttk, why `import tkinter as tk`, instead of `from tkinter import *` etc.
+                <br>I really appreciate it if you can help with it, because I can't really write it.</p>
+                <p>Just for reference: <a class="link" href="https://en.wikipedia.org/wiki/Tkinter">Wikipedia</a>, <a class="link" href="https://realpython.com/python-gui-tkinter/">RealPython</a>, <a class="link" href="https://docs.python.org/3/library/tkinter.html">Python docs</a>, <a class="link" href="https://www.tutorialspoint.com/python3/python_gui_programming.htm">Tutorialspoint</a>, <a class="link" href="https://www.youtube.com/watch?v=Dby5jRoENlI">and also my favorite YouTube video</a></b></p><br>
 
-                <p style="text-align: justify;">Etiam sed bibendum ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus pellentesque justo in ex accumsan luctus. Quisque elementum fringilla tincidunt. Aliquam interdum ullamcorper orci in tincidunt. Proin non semper nisl, et elementum enim. Quisque rutrum accumsan mi malesuada blandit. Suspendisse id consectetur sapien.</p>
-
-                <p style="text-align: justify;">Donec rutrum purus magna, sed convallis diam vehicula ac. Fusce vitae rhoncus mi, sit amet tincidunt leo. Donec congue suscipit augue sed dictum. Etiam eu vehicula dolor. In consectetur, risus faucibus commodo efficitur, velit massa commodo sem, ut lobortis ex nisl non tortor. Curabitur sed laoreet risus. Mauris in porttitor tortor. Cras sed tempor nulla, id tempor nisl. Quisque ac posuere justo.</p>
+                <p style="text-align: justify;">I started this page because despite the fact that tkinter is one of the most popular Python GUI frameworks, most of the documentation is only very superficial (or it's on hiatus. A lot can only be learned from the source code or from the Tcl manual page.
+                So I want to change the fact that if someone gets stuck using tkinter, or just wants to know more about it, don’t start asking questions on StackOverflow or Reddit, instead have a page where you can find all the information you need, in detail and in tkinter format. <br>Secondly I also want to do a detailed documentation for tkinter extensions (e.g. tkcalendar, ttkwidgets, ttkthemes, etc.)
+                It's a very big job, if you can and want to help in any format, please drop me an email: <a class="link" href="mailto:rdbende@gmail.com">rdbende@gmail.com!</a></p>
             </div>
-            <div class="column-40">
-                <div class="card" style="height: 470px;">
-                    <h2 style="font-weight: 700">Find docs quickly</h2>
+            <div class="column-nav">
+                <div class="card" style="height: 510px;">
+                    <h2 class="nav-title">Find docs quickly</h2>
                     <input type="text" id="searchBar" onkeyup="searchFunc()" placeholder="Search" title="Search the docs">
 
-                    <ul class="searchUl" id="searchUl">
-                        <li><a href="https://rdbende.github.io/tkinter-docs/widgets/tk.html">Tk</a></li>
-                        <li><a href="#">Toplevel</a></li>
-                        <li><a href="#">Frame</a></li>
-                        <li><a href="#">LabelFrame</a></li>
-                        <li><a href="#">Label</a></li>
-                        <li><a href="#">Message</a></li>
-                        <li><a href="#">Button</a></li>
-                        <li><a href="#">Entry</a></li>
-                        <li><a href="#">Checkbutton</a></li>
-                        <li><a href="#">Radiobutton</a></li>
-                        <li><a href="#">Text</a></li>
-                        <li><a href="#">Scale</a></li>
-                        <li><a href="#">LabeledScale</a></li>
-                        <li><a href="#">Combobox</a></li>
-                        <li><a href="#">Spinbox</a></li>
-                        <li><a href="#">Scrollbar</a></li>
-                        <li><a href="#">Progressbar</a></li>
-                        <li><a href="#">Canvas</a></li>
-                        <li><a href="#">Listbox</a></li>
-                        <li><a href="#">PanedWindow</a></li>
-                        <li><a href="#">Notebook</a></li>
-                        <li><a href="#">Treeview</a></li>
-                        <li><a href="#">Menus</a></li>
-                        <li><a href="#">Menubutton</a></li>
-                        <li><a href="#">OptionMenu</a></li>
-                        <li><a href="#">Separator</a></li>
-                        <li><a href="#">Sizegrip</a></li>
-                        <li><a href="#">PhotoImage</a></li>
+                    <ul class="nav-ul" id="navUl">
                         <li><a href="#">BitmapImage</a></li>
-                        <li><a href="#">Pack</a></li>
-                        <li><a href="#">Grid</a></li>
-                        <li><a href="#">Place</a></li>
-                        <li><a href="#">IntVar</a></li>
-                        <li><a href="#">StringVar</a></li>
-                        <li><a href="#">DoubleVar</a></li>
                         <li><a href="#">BooleanVar</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Style</a></li>
-                        <li><a href="#">ScrolledText</a></li>
-                        <li><a href="#">Font</a></li>
-                        <li><a href="#">Messageboxes</a></li>
-                        <li><a href="#">Filedialog</a></li>
-                        <li><a href="#">Simpledialog</a></li>
+                        <li><a href="#">Button</a></li>
+                        <li><a href="#">Canvas</a></li>
+                        <li><a href="#">Checkbutton</a></li>
+                        <li><a href="#">Combobox</a></li>
                         <li><a href="#">Commondialog</a></li>
                         <li><a href="#">Colorchooser</a></li>
-                        <li><a href="#">Fontchooser</a></li>
                         <li><a href="#">Dnd</a></li>
+                        <li><a href="#">DoubleVar</a></li>
+                        <li><a href="#">Entry</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Filedialog</a></li>
+                        <li><a href="#">Font</a></li>
+                        <li><a href="#">Fontchooser</a></li>
+                        <li><a href="#">Frame</a></li>
+                        <li><a href="#">Grid</a></li>
+                        <li><a href="#">IntVar</a></li>
+                        <li><a href="#">Label</a></li>
+                        <li><a href="#">LabelFrame</a></li>
+                        <li><a href="#">LabeledScale</a></li>
+                        <li><a href="#">Listbox</a></li>
+                        <li><a href="#">Menus</a></li>
+                        <li><a href="#">Menubutton</a></li>
+                        <li><a href="#">Message</a></li>
+                        <li><a href="#">Messageboxes</a></li>
+                        <li><a href="#">Notebook</a></li>
+                        <li><a href="#">OptionMenu</a></li>
+                        <li><a href="#">PanedWindow</a></li>
+                        <li><a href="#">Pack</a></li>
+                        <li><a href="#">PhotoImage</a></li>
+                        <li><a href="#">Place</a></li>
+                        <li><a href="#">Progressbar</a></li>                
+                        <li><a href="#">Radiobutton</a></li>
+                        <li><a href="#">Scale</a></li>
+                        <li><a href="#">Scrollbar</a></li>
+                        <li><a href="#">ScrolledText</a></li>
+                        <li><a href="#">Separator</a></li>
+                        <li><a href="#">Simpledialog</a></li>
+                        <li><a href="#">Sizegrip</a></li>
+                        <li><a href="#">Spinbox</a></li>
+                        <li><a href="#">StringVar</a></li>
+                        <li><a href="#">Style</a></li>
+                        <li><a href="#">Text</a></li>
                         <li><a href="#">Tix</a></li>
+                        <li><a href="E:/tkinter-docs/docs/tk.html">Tk</a></li>
+                        <li><a href="#">Toplevel</a></li>
+                        <li><a href="#">Treeview</a></li>
                     </ul>
 
                     <script>
@@ -92,7 +94,7 @@
                         var input, filter, ul, li, a, i, txtValue;
                         input = document.getElementById("searchBar");
                         filter = input.value.toUpperCase();
-                        ul = document.getElementById("searchUl");
+                        ul = document.getElementById("navUl");
                         li = ul.getElementsByTagName("li");
                         for (i = 0; i < li.length; i++) {
                             a = li[i].getElementsByTagName("a")[0];
@@ -110,66 +112,48 @@
         </div>
         <div>
             <div class="container">
-                <h1 class="md text-center my-2">Main widgets</h1>
+                <h1 class="text-center">Common widgets</h1>
                 <div class="row">
-                    <div class="column-50">
-                        <a href="https://rdbende.github.io/tkinter-docs/widgets/tk.html"><div class="card-btn">
+                    <div class="column-33">
+                        <a href="E:/tkinter-docs/tutorials/tk.html"><div class="card-btn">
                             <p class="title">tk.Tk</p>
-                            <p class="desc">A window</p>
+                            <p class="desc">Tkinter's main window</p>
                         </div></a>
-                        <a href="#"><div class="card-btn col-1">
-                            <p class="title">tk.Frame</p>
-                            <p class="desc">Container for other widgets</p>
-                        </div></a>
-                        <a href="#"><div class="card-btn col-1">
-                            <p class="title">tk.Label</p>
-                            <p class="desc">Inline text display</p>
-                        </div></a>
-                        <a href="#"><div class="card-btn col-1">
-                            <p class="title">tk.Button</p>
-                            <p class="desc">Just a simple button</p>
-                        </div></a>
-                        <a href="#"><div class="card-btn col-1">
-                            <p class="title">tk.Entry</p>
+                        <a href="#"><div class="card-btn">
+                            <p class="title">ttk.Entry</p>
                             <p class="desc">Inline text input</p>
                         </div></a>
-                        <a href="#"><div class="card-btn col-1">
-                            <p class="title">tk.Checkbutton</p>
-                            <p class="desc">A checkbox</p>
-                        </div></a>
-                        <a href="#"><div class="card-btn col-1">
-                            <p class="title">tk.Radiobutton</p>
-                            <p class="desc">A radiobutton</p>
+                        <a href="#"><div class="card-btn">
+                            <p class="title">ttk.Combobox</p>
+                            <p class="desc">Combo dropdown</p>
                         </div></a>
                     </div>
-                    <div class="column-50">
-                        <a href="#"><div class="card-btn col-2">
-                            <p class="title">tk.Toplevel</p>
-                            <p class="desc">A toplevel window</p>
-                        </div></a>
-                        <a href="#"><div class="card-btn col-2">
-                            <p class="title">ttk.Frame</p>
-                            <p class="desc">Container for other widgets</p>
-                        </div></a>
-                        <a href="#"><div class="card-btn col-2">
+                    <div class="column-33">
+                        <a href="#"><div class="card-btn">
                             <p class="title">ttk.Label</p>
                             <p class="desc">Inline text display</p>
                         </div></a>
-                        <a href="#"><div class="card-btn col-2">
-                            <p class="title">ttk.Button</p>
-                            <p class="desc">A themeable button</p>
-                        </div></a>
-                        <a href="#"><div class="card-btn col-2">
-                            <p class="title">ttk.Entry</p>
-                            <p class="desc">Themeable text input</p>
-                        </div></a>
-                        <a href="#"><div class="card-btn col-2">
+                        <a href="#"><div class="card-btn">
                             <p class="title">ttk.Checkbutton</p>
-                            <p class="desc">A themeable checkbox</p>
+                            <p class="desc">Button for on/off</p>
                         </div></a>
-                        <a href="#"><div class="card-btn col-2">
+                        <a href="#"><div class="card-btn">
+                            <p class="title">ttk.Spinbox</p>
+                            <p class="desc">Select from range</p>
+                        </div></a>
+                   </div>
+                   <div class="column-33">
+                        <a href="#"><div class="card-btn">
+                            <p class="title">ttk.Button</p>
+                            <p class="desc">Just a simple button</p>
+                        </div></a>
+                        <a href="#"><div class="card-btn">
                             <p class="title">ttk.Radiobutton</p>
-                            <p class="desc">A themeable radiobutton</p>
+                            <p class="desc">Select from multiple options</p>
+                        </div></a>
+                        <a href="#"><div class="card-btn">
+                            <p class="title">ttk.Scale</p>
+                            <p class="desc">Tkinter's slider widget</p>
                         </div></a>
                    </div> 
                 </div>
