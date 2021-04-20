@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-
-
 :root {
   
   --bg-color: #161623;
@@ -370,7 +368,7 @@ tbody:last-child tr:last-child td:last-child {
 }
 
 .wip {
-  font-weight: 700
+  font-weight: 700;
   color: var(--accent-color);
 }
 
