@@ -3,186 +3,205 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://rdbende.github.io/tkinter-docs/ss/style.css">
-    <link rel="stylesheet" type="text/css" href="https://rdbende.github.io/tkinter-docs/css/utils.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://rdbende.github.io/tkinter-docs/css/style.css">
     <title>Tkinter docs</title>
 </head>
 <body>
-    <div class="navbar" id="navbar">
-        <div class="flex">
-            <a class="logo" href="https://rdbende.github.io/tkinter-docs/index.html" title="Home"><img src="https://rdbende.github.io/tkinter-docs/images/logo.png"></a>
-            <nav>
-                <ul>
-                    <li><a href="https://rdbende.github.io/tkinter-docs/tutorials/" title="Tutorials"><strong>Tutorials</strong></a></li>
-                    <li><a href="https://rdbende.github.io/tkinter-docs/docs/" title="Docs"><strong>Docs</strong></a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    
-    <div class="container-main">
-        <div class="row">
-            <div class="column-67">
+    <header class="navbar">
+        <a class="logo" href="https://rdbende.github.io/tkinter-docs/index.html" title="Home"><img src="https://rdbende.github.io/tkinter-docs/images/logo.png"></a>
+        <ul>
+            <li><a href="tutorials/" title="Go to tutorials">Tutorials</a></li>
+            <li><a href="docs/" title="Go to documentations">Docs</a></li>
+        </ul>
+    </header>
+    <main>
+        <section class="content-sidebar">
+            <article class="card card--intro">
                 <h1>What is Tkinter?</h1>
-                <p style="text-align: justify;"><b>Here should be a short, but detailed summary of what tkinter is, where does it come from, its disadvantages, advantages, portability, etc., <br>and also an introduction to tkinter programming, why use ttk, why `import tkinter as tk`, instead of `from tkinter import *` etc.
-                <br>I really appreciate it if you can help with it, because I can't really write it.</p>
-                <p>Just for reference: <a class="link" href="https://en.wikipedia.org/wiki/Tkinter">Wikipedia</a>, <a class="link" href="https://realpython.com/python-gui-tkinter/">RealPython</a>, <a class="link" href="https://docs.python.org/3/library/tkinter.html">Python docs</a>, <a class="link" href="https://www.tutorialspoint.com/python3/python_gui_programming.htm">Tutorialspoint</a>, <a class="link" href="https://www.youtube.com/watch?v=Dby5jRoENlI">and also my favorite YouTube video</a></b></p><br>
-
-                <p style="text-align: justify;">I started this page because despite the fact that tkinter is one of the most popular Python GUI frameworks, most of the documentation is only very superficial (or it's on hiatus. A lot can only be learned from the source code or from the Tcl manual page.
-                So I want to change the fact that if someone gets stuck using tkinter, or just wants to know more about it, don’t start asking questions on StackOverflow or Reddit, instead have a page where you can find all the information you need, in detail and in tkinter format. <br>Secondly I also want to make a detailed documentation for tkinter extensions (e.g. tkcalendar, ttkwidgets, ttkthemes, etc.)
-                It's a very big job, if you can and want to help in any format, please drop me an email: <a class="link" href="mailto:rdbende@gmail.com">rdbende@gmail.com!</a></p>
-            </div>
-            <div class="column-nav">
-                <div class="card" style="height: 510px;">
-                    <h2 class="nav-title">Find docs quickly</h2>
-                    <input type="text" id="searchBar" onkeyup="searchFunc()" placeholder="Search" title="Search the docs">
-
-                    <ul class="nav-ul" id="navUl">
-                        <li><a href="#">BitmapImage</a></li>
-                        <li><a href="#">BooleanVar</a></li>
-                        <li><a href="#">Button</a></li>
-                        <li><a href="#">Canvas</a></li>
-                        <li><a href="#">Checkbutton</a></li>
-                        <li><a href="#">Combobox</a></li>
-                        <li><a href="#">Commondialog</a></li>
-                        <li><a href="#">Colorchooser</a></li>
-                        <li><a href="#">Dnd</a></li>
-                        <li><a href="#">DoubleVar</a></li>
-                        <li><a href="#">Entry</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Filedialog</a></li>
-                        <li><a href="#">Font</a></li>
-                        <li><a href="#">Fontchooser</a></li>
-                        <li><a href="#">Frame</a></li>
-                        <li><a href="#">Grid</a></li>
-                        <li><a href="#">IntVar</a></li>
-                        <li><a href="#">Label</a></li>
-                        <li><a href="#">LabelFrame</a></li>
-                        <li><a href="#">LabeledScale</a></li>
-                        <li><a href="#">Listbox</a></li>
-                        <li><a href="#">Menus</a></li>
-                        <li><a href="#">Menubutton</a></li>
-                        <li><a href="#">Message</a></li>
-                        <li><a href="#">Messageboxes</a></li>
-                        <li><a href="#">Notebook</a></li>
-                        <li><a href="#">OptionMenu</a></li>
-                        <li><a href="#">PanedWindow</a></li>
-                        <li><a href="#">Pack</a></li>
-                        <li><a href="#">PhotoImage</a></li>
-                        <li><a href="#">Place</a></li>
-                        <li><a href="#">Progressbar</a></li>                
-                        <li><a href="#">Radiobutton</a></li>
-                        <li><a href="#">Scale</a></li>
-                        <li><a href="#">Scrollbar</a></li>
-                        <li><a href="#">ScrolledText</a></li>
-                        <li><a href="#">Separator</a></li>
-                        <li><a href="#">Simpledialog</a></li>
-                        <li><a href="#">Sizegrip</a></li>
-                        <li><a href="#">Spinbox</a></li>
-                        <li><a href="#">StringVar</a></li>
-                        <li><a href="#">Style</a></li>
-                        <li><a href="#">Text</a></li>
-                        <li><a href="#">Tix</a></li>
-                        <li><a href="https://rdbende.github.io/tkinter-docs/docs/tk.html">Tk</a></li>
-                        <li><a href="#">Toplevel</a></li>
-                        <li><a href="#">Treeview</a></li>
-                    </ul>
-
-                    <script>
-                    function searchFunc() {
-                        var input, filter, ul, li, a, i, txtValue;
-                        input = document.getElementById("searchBar");
-                        filter = input.value.toUpperCase();
-                        ul = document.getElementById("navUl");
-                        li = ul.getElementsByTagName("li");
-                        for (i = 0; i < li.length; i++) {
-                            a = li[i].getElementsByTagName("a")[0];
-                            txtValue = a.textContent || a.innerText;
-                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                li[i].style.display = "";
-                            } else {
-                                li[i].style.display = "none";
-                            }
-                        }
-                    }
-                    </script>
+                <p class="wip text--center">This site is a work in progress.</p>
+                <p>Well, if you are on this site, you probably know what it is, but you can read about it in detail here.</p>
+                <p>
+                <img src="images/tcltk_logo.png" style="float: left; margin: 5px 20px 0 0; height: 7em;">
+                Tkinter is Python's built-in standar GUI framework, which wraps the <em>tk</em> GUI toolkit. <em>Tk</em> is written in  <a href="https://en.wikipedia.org/wiki/Tcl" class="link" target="blank">Tcl</a> but also used in other languages (Python, Ruby, Perl). Tkinter is included with standard Windows, Linux and Mac installs of Python, so you don't need to install it separately, and it's cross-platform. It's name, <b>tkinter</b> is comes from the composition of <i>Tk + interface.</i>
+                </p>
+                <h2 class="subtitle">A short introduction</h2>
+                <p>
+                Most of the time, the <code>tkinter</code> and the <code>ttk</code> modules are needed when using tkinter, but there are some accessories, such the <code>filedialog</code> and the <code>messagebox</code>.
+                </p>
+                <p>
+                The <em>tk</em> interface itself is located in a binary module called <code>_tkinter</code>. This module contains the low-level interface to <em>tk</em>, and should never be used directly by application programmers. It is usually a shared library, or DLL, but might in some cases be statically linked with the Python interpreter.
+                </p>
+                <p>
+                There's a module, <code>tkinter.constants</code>, where all tkinter constants are defined that can be used for keywords, but of course we can also use strings. If you import tkinter this module is automatically imported, so you don't have do it separately.
+                </p>
+                <p>
+                And now a few words about importing, because many people (rightly) uses it incorrectly. If only tkinter is imported, you can make a well-functioning GUI, but you won't be satisfied with its appearance. It could be compared with <em>Windows 95</em>. It was not today, mainly not in design. Therefore, tkinter (ie <em>tk</em>) has an extension module, called <code>ttk</code>. With that you can make quite modern (platform dependent) looking apps. This appearance is native to the operating system, so it looks different from Windows and Mac. Unfortunately, on Linux there's not a big difference between the plain tkinter and the ttk widgets.
+                </p>
+                <p>
+                Another good thing that in ttk can not only make native apps, but you able to set different themes (hence its name: <mark>t</mark>hemed <mark>tk</mark>).<br>
+                Last but not least, ttk also has some new widgets compared to tkinter, but others are missing from it, so pay attention to which module you are using for the widget. So return to imports. most of tkinter applications are starts as:
+                </p>
+<pre>
+<span class="keyword">from</span> tkinter <span class="keyword">import</span> *
+</pre>       
+                <p>
+                but a "well-done" tkinter app should begin like this:
+                </p>
+<pre>
+<span class="keyword">import</span> tkinter <span class="keyword">as</span> tk
+<span class="keyword">from</span> tkinter <span class="keyword">import</span> ttk
+</pre>
+                <p>
+                Why? We import the first line by tkinter as <code>tk</code> to shorten its name. Second, we import ttk to make our app more professional. This is, on the one hand, for readability, this is <a href="https://www.python.org/dev/peps/pep-0020/" class="link" target="blank">very important</a> in Python. On the other hand, if we use a wildcard import with ttk, which is quite common:
+                </p>
+<pre>
+<span class="keyword">from</span> tkinter <span class="keyword">import</span> *
+<span class="keyword">from</span> tkinter.ttk <span class="keyword">import</span> *
+</pre>
+                <p>
+                then the ttk widgets simply overwrite the tkinter widgets, which is sometimes not appropriate.
+                </p>
+                <p>Here can you navigate to the tkinter submodule docs:
+                <ul>
+                    <li><a href="#" class="link link--grey">colorchooser</a></li>
+                    <li><a href="#" class="link link--grey">commondialog</a></li>
+                    <li><a href="#" class="link link--grey">dnd</a></li>
+                    <li><a href="#" class="link link--grey">filedialog</a></li>
+                    <li><a href="#" class="link link--grey">font</a></li>
+                    <li><a href="#" class="link link--grey">messagebox</a></li>
+                    <li><a href="#" class="link link--grey">scrolledtext</a></li>
+                    <li><a href="#" class="link link--grey">tix</a></li>
+                </ul>
+                </p>
+                <h2 class="subtitle">Notes</h2>
+                <p>
+                This site assumes that you're somewhat familiar with Python and that you're using Python 3, not Python 2. There are some significant differences between the two, including module naming, which is the first thing you'll encounter when trying tkinter.
+                </p>
+                <p>
+                We do not use plain tkinter widgets in our tutorials, only if it is specifically needed, and I recommend this to anyone who uses tkinter.
+                </p>
+                <p>
+                At this site we use tkinter as <em>tk</em>, and ttk as <em>ttk</em> you probably already know why.
+                </p>
+                </p>
+                <div class="text--center">
+                    <a href="https://rdbende.github.io/tkinter-docs/docs/"><button class="go__button">Go to the docs</button></a>
                 </div>
+                <p class="source"><a href="https://github.com/tcltk/tk" class="link" target="blank">Here</a> can you find the tcl/tk source code, and <a href="https://github.com/python/cpython/tree/master/Lib/tkinter/" class="link" target="blank">here is the tkinter</a></p>
+            </article>
+            <div class="card card--search">
+                <h2 class="nav__title">Find docs quickly</h2>
+                <input type="text" id="searchBar" oncontextmenu="return false" onkeyup="searchDocsInNavbar()" placeholder="Search" title="Search the docs">
+
+                <ul class="search__ul" id="searchUl">
+                    <li><a href="#">BitmapImage</a></li>
+                    <li><a href="#">BooleanVar</a></li>
+                    <li><a href="#">Button</a></li>
+                    <li><a href="#">Canvas</a></li>
+                    <li><a href="#">Checkbutton</a></li>
+                    <li><a href="#">Combobox</a></li>
+                    <li><a href="#">Commondialog</a></li>
+                    <li><a href="#">Colorchooser</a></li>
+                    <li><a href="#">Dnd</a></li>
+                    <li><a href="#">DoubleVar</a></li>
+                    <li><a href="#">Entry</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Filedialog</a></li>
+                    <li><a href="#">Font</a></li>
+                    <li><a href="#">Fontchooser</a></li>
+                    <li><a href="#">Frame</a></li>
+                    <li><a href="#">Grid</a></li>
+                    <li><a href="#">IntVar</a></li>
+                    <li><a href="#">Label</a></li>
+                    <li><a href="#">LabelFrame</a></li>
+                    <li><a href="#">LabeledScale</a></li>
+                    <li><a href="#">Listbox</a></li>
+                    <li><a href="#">Menus</a></li>
+                    <li><a href="#">Menubutton</a></li>
+                    <li><a href="#">Message</a></li>
+                    <li><a href="#">Messageboxes</a></li>
+                    <li><a href="#">Notebook</a></li>
+                    <li><a href="#">OptionMenu</a></li>
+                    <li><a href="#">PanedWindow</a></li>
+                    <li><a href="#">Pack</a></li>
+                    <li><a href="#">PhotoImage</a></li>
+                    <li><a href="#">Place</a></li>
+                    <li><a href="#">Progressbar</a></li>
+                    <li><a href="#">Radiobutton</a></li>
+                    <li><a href="#">Scale</a></li>
+                    <li><a href="#">Scrollbar</a></li>
+                    <li><a href="#">ScrolledText</a></li>
+                    <li><a href="#">Separator</a></li>
+                    <li><a href="#">Simpledialog</a></li>
+                    <li><a href="#">Sizegrip</a></li>
+                    <li><a href="#">Spinbox</a></li>
+                    <li><a href="#">StringVar</a></li>
+                    <li><a href="#">Style</a></li>
+                    <li><a href="#">Text</a></li>
+                    <li><a href="#">Tix</a></li>
+                    <li><a href="docs/tk.html">Tk</a></li>
+                    <li><a href="#">Toplevel</a></li>
+                    <li><a href="#">Treeview</a></li>
+                </ul>
             </div>
-        </div>
-        <div>
-            <div class="container">
-                <h1 class="text-center">Common widgets</h1>
-                <div class="row">
-                    <div class="column-33">
-                        <a href="https://rdbende.github.io/tkinter-docs/tutorials/tk.html"><div class="card-btn">
-                            <p class="title">tk.Tk</p>
-                            <p class="desc">Tkinter's main window</p>
-                        </div></a>
-                        <a href="#"><div class="card-btn">
-                            <p class="title">ttk.Entry</p>
-                            <p class="desc">Inline text input</p>
-                        </div></a>
-                        <a href="#"><div class="card-btn">
-                            <p class="title">ttk.Combobox</p>
-                            <p class="desc">Combo dropdown</p>
-                        </div></a>
-                    </div>
-                    <div class="column-33">
-                        <a href="#"><div class="card-btn">
-                            <p class="title">ttk.Label</p>
-                            <p class="desc">Inline text display</p>
-                        </div></a>
-                        <a href="#"><div class="card-btn">
-                            <p class="title">ttk.Checkbutton</p>
-                            <p class="desc">Button for on/off</p>
-                        </div></a>
-                        <a href="#"><div class="card-btn">
-                            <p class="title">ttk.Spinbox</p>
-                            <p class="desc">Select from range</p>
-                        </div></a>
-                   </div>
-                   <div class="column-33">
-                        <a href="#"><div class="card-btn">
-                            <p class="title">ttk.Button</p>
-                            <p class="desc">Just a simple button</p>
-                        </div></a>
-                        <a href="#"><div class="card-btn">
-                            <p class="title">ttk.Radiobutton</p>
-                            <p class="desc">Select from multiple options</p>
-                        </div></a>
-                        <a href="#"><div class="card-btn">
-                            <p class="title">ttk.Scale</p>
-                            <p class="desc">Tkinter's slider widget</p>
-                        </div></a>
-                   </div> 
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer class="footer bg-dark">
-        <div>
-            <p>Copyright &copy; 2021 rdbende</p>
-        </div>
-        <div class="github">
-            <a href="https://github.com/rdbende/tkinter-docs/"><i class="fab fa-github fa-2x"></i></a>
-        </div>
+        </section>
+        <section style="overflow: auto;">
+            <h2 class="text--center">Tkinter vs PyQt</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Basis</th>
+                        <th>Tkinter</th>
+                        <th>PyQt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>License</td>
+                        <td>Tk is available under BSD license, it's very liberal, and since tkinter is built in the standard Python library, it's free for any commercial use.</td>
+                        <td>PyQt is available under Riverbank Commercial License and GPLv3. If you do not wish to release your application under a GPL-compatible license, you must apply for a commercial license.</td>
+                    </tr>
+                    <tr>
+                        <td>Design</td>
+                        <td>Unfortunately tkinter has a really ugly appearance, but if you use ttk perhaps with <a href="https://github.com/TkinterEP/ttkthemes" class="link" target="blank">ttkthemes</a>, you can make it modern too!</td>
+                        <td>PyQt has a quite nice look, and you can easily style your widgets.</td>
+                    </tr>
+                    <tr>
+                        <td>Widgets</td>
+                        <td>Tkinter doesn't have many widgets by default (40, as I know), but you can create your own, or here's a nice package of several fantastic and useful widgets: <a href="https://github.com/TkinterEP/ttkwidget" class="link" target="blank">ttkwidgets</a>.</td>
+                        <td>PyQt has almost every imaginable widget with lots of useful features.</td>
+                    </tr>
+                    <tr>
+                        <td>Ease of understanding</td>
+                        <td>Tkinter is easy to understand and master. It doesn't have much complicated part and you don't need to write object-oriented code.</td>
+                        <td>PyQt requires a lot of time for understanding all the details. It's object oriented, so if you don’t know it, you have to learn it too.</td>
+                    </tr>
+                    <tr>
+                        <td>GUI builder</td>
+                        <td>Tkinter doesn't have any official GUI builder, but there's a nice GUI builder (made in tkinter): <a href="https://github.com/alejandroautalan/pygubu-designer" class="link" target="blank">Pygubu</a>.</td>
+                        <td>PyQt have a Qt Designer tool which we can use to build GUIs and then get the Python code.</td>
+                    </tr>
+                    <tr>
+                        <td>Installation</td>
+                        <td>It is included in the standard Python library, so no need to install it separately.</td>
+                        <td>You have to install PyQt separately, usually with pip.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">If you want more comparison <a href="https://www.youtube.com/watch?v=Dby5jRoENlI" class="link" target="blank">here is</a> your video, from Alan D. Moore!
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer id="footer">
+        <ul>
+            <li><p>Built with HTML5, CSS3, JavaScript</p></li>
+            <li><a href="github.com/rdbende">Built by rdbende</a></li>
+        </ul>
     </footer>
-    <script>
-        window.onscroll = function() {scrollFunc()};
-
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-
-        function scrollFunc() {
-          if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-          } else {
-            navbar.classList.remove("sticky");
-          }
-        }
-
-        scrollFunc()
-    </script>
+    <button onclick="scrollToTop()" class="top__button" id="topButton"></button>
+    <script type="text/javascript" src="https://rdbende.github.io/tkinter-docs/js/scroll_tracker.js"></script>
+    <script type="text/javascript" src="https://rdbende.github.io/tkinter-docs/js/search.js"></script>
 </body>
 </html>

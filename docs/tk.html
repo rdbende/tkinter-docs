@@ -4,153 +4,171 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://rdbende.github.io/tkinter-docs/css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://rdbende.github.io/tkinter-docs/css/utils.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
-    <title>Docs | tk.Tk</title>
+    <title>tk.Tk | Tkinter docs</title>
 </head>
 <body>
-    <div class="navbar" id="navbar">
-        <div class="flex">
-            <a class="logo" href="https://rdbende.github.io/tkinter-docs/index.html" title="Home"><img src="https://rdbende.github.io/tkinter-docs/images/logo.png"></a>
-            <nav>
-                <ul>
-                    <li><a href="https://rdbende.github.io/tkinter-docs/tutorials/" title="Tutorials"><strong>Tutorials</strong></a></li>
-                    <li><a href="https://rdbende.github.io/tkinter-docs/docs/" title="Docs"><strong>Docs</strong></a></li>
+    <header class="navbar">
+        <a class="logo" href="https://rdbende.github.io/tkinter-docs/index.html" title="Home"><img src="https://rdbende.github.io/tkinter-docs/images/logo.png"></a>
+        <ul>
+            <li><a href="https://rdbende.github.io/tkinter-docs/tutorials/" title="Go to tutorials">Tutorials</a></li>
+            <li><a href="https://rdbende.github.io/tkinter-docs/docs/" title="Go to documentations">Docs</a></li>
+        </ul>
+    </header>
+    <main>
+        <section class="content-sidebar">
+            <article class="card card--intro">
+
+                <h1><code>tk.Tk</code></h1>
+
+                <p>Tk is basically the main window of tkinter. Creating a <code>tk.Tk</code> instance initializes the <code>tcl/tk</code> interpreter and creates the root window. If you don't explicitly create it, one will be implicitly created when you create your first widget. It will be stored in a global variable called <code>_default_root</code>. If a widget doesn't have a parent specified than it will automatically have this instance as its parent.</p>
+
+                <h2 class="subtitle text--center" id="methods_section">Methods</h2>
+
+                <div class="doc__card">
+                    <div class="code__doc">
+                        <span class="code__name" id="aspect">.aspect(minNumer, minDenom, maxNumer, maxDenom)</span>
+                        <div class="code__desc">
+                            <p>If all the values are specified, then they will be passed to the window manager and the window manager should use them to enforce a range of acceptable aspect ratios for window.</p>
+                            <p>The aspect ratio of window (width/length) will be constrained to lie between minNumer/minDenom and maxNumer/maxDenom.</p>
+                            <p>If all the values are empty strings then any existing aspect ratio restrictions are removed.</p>
+                        </div>
+                        <p>Same as <code>wm_aspect</code></p>
+                    </div>
+                </div>
+
+                <div class="doc__card">
+                    <div class="code__doc">
+                        <span class="code__name" id="attributes">.attributes(option, value, option, value, ...)</span>
+                        <p class="code__desc">Sets the window attributes. The syntax is: one of the following values, (it's important that the hyphen is not left out), then the value can be specified as a separate attribute. You can pass any number of key-value pairs to the function, but the order is important.</p>
+                        <div class="code__desc">
+                            <span class="code__name"><code>-alpha</code></span>
+                            <span class="code__type">float</span>
+                            <div class="code__desc">Controls the window opacity from <code>0.0</code>(transparent) to <code>1.0</code>(opaque). Unfortunately, this not only controls the transparency of the window content, but also the titlebar and windo border, so the application can look quite weird. May not work on many Linux systems.</div>
+
+                            <span class="code__name"><code>-disabled</code></span>
+                            <span class="code__type">bool</span>
+                            <div class="code__desc">Doesn't allow to interact with the window, if you try, you'll get a notification sound. Removes the focus.</div>
+
+                            <span class="code__name"><code>-fullscreen</code></span>
+                            <span class="code__type">bool</span>
+                            <div class="code__desc">Controls whether the window fills the whole screen, including taskbar. If don't create possibility to close the window, you may have to use <code>Alt + F4</code> or <code>Cmd + W</code> on Mac.</div>
+
+                            <span class="code__name"><code>-modified</code></span>
+                            <span class="code__type">bool</span>
+                            <div class="code__desc">Controls whether the window is marked as being modified (different close button).</div>
+
+                            <span class="code__name"><code>-notify</code></span>
+                            <span class="code__type">bool</span>
+                            <div class="code__desc">Controls whether the window's icon bounces in the dock.</div>
+
+                            <span class="code__name"><code>-titlepath</code></span>
+                            <span class="code__type">filename</span>
+                            <div class="code__desc">Associates a (draggable) file icon with the window title that can be used to manage the given file with other applications.</div>
+
+                            <span class="code__name"><code>-toolwindow</code></span>
+                            <span class="code__type">bool</span>
+                            <div class="code__desc">Makes a window with a single close-button (smaller than usual) on the right of the title bar, just like with torn off menus.</div>
+
+                            <span class="code__name"><code>-topmost</code></span>
+                            <span class="code__type">bool</span>
+                            <div class="code__desc">Makes sure the window always stays on top of all other windows, even if it has no focus.</div>
+
+                            <span class="code__name"><code>-transparent</code> or <code>-transparentcolor</code></span>
+                            <span class="code__type">color</span>
+                            <div class="code__desc">Makes all areas of the window transparent and cursor penetrable with the specified color. Unfortunately you can't control this transparency.</div>
+
+                            <span class="code__name"><code>-type</code></span>
+                            <span class="code__type">list</span>
+                            <div class="code__desc">
+                                <p>Sets the type of top-level window. The most of this options is unnecessary, but splash and dialog can be useful.</p>
+                                <p>Options:</p>
+                                <ul class="values">
+                                    <li>combo</li>
+                                    <li>dnd</li>
+                                    <li>desktop</li>
+                                    <li>dialog</li>
+                                    <li>dock</li>
+                                    <li>dropdown_menu<br></li>
+                                    <li>menu</li>
+                                    <li>normal</li>
+                                    <li>notification</li>
+                                    <li>popup_menu</li>
+                                    <li>splash</li>
+                                    <li>tooltip</li>
+                                    <li>toolbar</li>
+                                    <li>utility</li>
+                                </ul>
+                            </div>
+
+                            <span class="code__name"><code>-zoomed</code></span>
+                            <span class="code__type">bool</span>
+                            <div class="code__desc">Controls whether the window is in zoomed state (because <code>.state('zoomed')</code> doesn't work on X11)</div>
+                        </div>
+                        <p>Same as <code>wm_attributes</code></p>
+                    </div>
+                </div>
+
+                <div class="doc__card">
+                    <div class="code__doc">
+                        <span class="code__name" id="aspect">.deiconify()</span>
+                        <div class="code__desc">
+                            <p>Deiconify the window. On Windows also gives it focus.</p>
+                        </div>
+                        <p>Same as <code>wm_title</code></p>
+                    </div>
+                </div>
+
+                <div class="doc__card">
+                    <div class="code__doc">
+                        <span class="code__name" id="aspect">.geometry(newGeometry)</span>
+                        <div class="code__desc">
+                            <p>The function takes a single parameter as attribute, the geometry must be specified as a single string, yep, this solution  is kinda weird. The syntax is: "<em>width</em>x<em>height</em>+<em>x</em>+<em>y</em>" as one single string.</p>
+                            <p>If you want to specify just the width and height then pass <code>"300x300"</code> to the argument, of course with your own values.</p>
+                            <p>If you want to specify just the x and y position then pass <code>"+300+300"</code> to the argument, of course with your own values. It's important that the + sign is not left out from the beginning of the string.</p>
+                            <p>And of course you can define all the 4 values the same time. <code>"300x300+300+300"</code></p>
+                        </div>
+                        <p>Same as <code>wm_title</code></p>
+                    </div>
+                </div>
+
+                <div class="doc__card">
+                    <div class="code__doc">
+                        <span class="code__name" id="aspect">.iconify()</span>
+                        <div class="code__desc">
+                            <p>Iconify the window, so it'll appear as an icon on the taskbar/dock.</p>
+                        </div>
+                        <p>Same as <code>wm_title</code></p>
+                    </div>
+                </div>
+                
+                <div class="doc__card">
+                    <div class="code__doc">
+                        <span class="code__name" id="aspect">.title(string)</span>
+                        <div class="code__desc">
+                            <p>Sets the window title. This appears in the title bar of the window and on the taskbar/dock icon or its tooltip. The only attribute is the <code>string</code>, which of course means the title string.</p>
+                        </div>
+                        <p>Same as <code>wm_title</code></p>
+                    </div>
+                </div>
+                
+            </article>
+            <div class="card card--nav">
+                <h2 class="nav__title">Chapters</h2>
+                <ul class="search__ul" id="searchUl">
+                    <li><a href="#attributes_section">Attributes</a></li>                    
+                    <li><a href="#methods_section">Methods</a></li>
+                    <li><a href="#events_section">Events</a></li>
                 </ul>
-            </nav>
-        </div>
-    </div>
-    
-    <div class="container-main">
-        <div class="column-67">
-            <div class="card">
-                <h1>tk.Tk</h1>
-                <h2 id="methods" class="page-title">Metohds</h2>
-                <dl>
-                    
-                    <dt id="aspect">root.<b>aspect</b>(minNumer, minDenom, maxNumer, maxDenom)</dt>
-                    <dd>If minNumer, minDenom, maxNumer, and maxDenom are all specified, then they will be passed to the window manager and the window manager should use them to enforce a range of acceptable aspect ratios for window. The aspect ratio of window (width/length) will be constrained to lie between minNumer/minDenom and maxNumer/maxDenom. If minNumer etc. are all specified as empty strings, then any existing aspect ratio restrictions are removed. If minNumer etc. are specified, then the command returns an empty string. Otherwise, it returns a Tcl list containing four elements, which are the current values of minNumer, minDenom, maxNumer, and maxDenom (if no aspect restrictions are in effect, then an empty string is returned). Same as <code>wm_aspect</code></dd>
-                    <dt id="wm_attributes">root.<b>attributes</b>(option, value, option, value, ...)</dt>
-                    <dd>
-
-                    <code>-alpha</code> float<img height="15" src="https://rdbende.github.io/tkinter-docs/images/windows.svg"><img height="15" src="https://rdbende.github.io/tkinter-docs/images/linux.svg"><img height="15" src="https://rdbende.github.io/tkinter-docs/images/mac.svg"><br>
-                    Controls opacity from 0.0 to 1.0. May not work on any Linux devices.<br><br>
-
-                    <code>-disabled</code> bool<img height="15" src="https://rdbende.github.io/tkinter-docs/images/windows.svg"><br>
-                    Makes it impossible to interact with the window and redraws the focus.<br><br>
-
-                    <code>-fullscreen</code> bool<img height="15" src="https://rdbende.github.io/tkinter-docs/images/windows.svg"><img height="15" src="https://rdbende.github.io/tkinter-docs/images/linux.svg"><img height="15" src="https://rdbende.github.io/tkinter-docs/images/mac.svg"><br>
-                    Controls whether the window fills the whole screen, including taskbar.<br><br>
-
-                    <code>-modified</code> bool<img height="15" src="https://rdbende.github.io/tkinter-docs/images/mac.svg"><br>
-                    Controls whether the window is marked as being modified (different close button).<br><br>
-
-                    <code>-notify</code> bool<img height="15" src="https://rdbende.github.io/tkinter-docs/images/mac.svg"><br>
-                    Controls whether the window's icon bounces in the dock.<br><br>
-
-                    <code>-titlepath</code> filename<img height="15" src="https://rdbende.github.io/tkinter-docs/images/mac.svg"><br>
-                    Associates a (draggable) file icon with the window title that can be used to manage the given file with other applications.<br><br>
-
-                    <code>-toolwindow</code> bool<img height="15" src="https://rdbende.github.io/tkinter-docs/images/windows.svg"><br>
-                    Makes a window with a single close-button (smaller than usual) on the right of the title bar.<br><br>
-
-                    <code>-topmost</code> bool<img height="15" src="https://rdbende.github.io/tkinter-docs/images/windows.svg"><img height="15" src="https://rdbende.github.io/tkinter-docs/images/linux.svg"><img height="15" src="https://rdbende.github.io/tkinter-docs/images/mac.svg"><br>
-                    Makes sure the window always stays on top of all other windows.<br><br>
-
-                    <code>-transparent</code> bool<img height="15" src="Ehttps://rdbende.github.io/tkinter-docs/images/mac.svg"><br>
-                    Controls whether the window has a shadow (useful for transparent windows, though care must be taken to draw appropriately to take advantage).<br><br>
-
-                    <code>-type</code> list<img height="15" src="https://rdbende.github.io/tkinter-docs/images/linux.svg"><br>
-                    This is provided in Tk 8.6, 8.5.9+ and 8.4.20+ to support the extended window manager hint property that governs a toplevel window's type on X11. Options:<br>
-                    <ul style="display: list-item; list-style-type: disc; margin-left: 35px;">
-                        <li>combo</li>
-                        <li>dnd</li>
-                        <li>desktop</li>
-                        <li>dialog</li>
-                        <li>dock</li>
-                        <li>dropdown_menu<br></li>
-                        <li>menu</li>
-                        <li>normal</li>
-                        <li>notification</li>
-                        <li>popup_menu</li>
-                        <li>splash</li>
-                        <li>tooltip</li>
-                        <li>toolbar</li>
-                        <li>utility</li>
-                    </ul><br><br>
-                    <code>-zoomed</code> bool<img height="15" src="https://rdbende.github.io/tkinter-docs/images/linux.svg"><br>
-                    Controls whether this window is in the zoomed state (because <code>root.state('zoomed')</code> doesn't work on X11).<br><br>
-
-                    Same as <code>wm_attributes</code><br>
-                    <dt id="client">root.<b>client</b>(name)
-                    <dd>Lorem ipsum dolor sit amet. Same as <code>wm_client</code></dd>
-                    <dt id="geometry">root.<b>geometry</b>(width, height, x, y)</dt>
-                    <dd>Controls the size and position of the window. Syntax: <code>widthxheight+x+y</code>Same as <code>wm_geometry</code></dd>
-                    <dt id="group">root.<b>group</b>(string)</dt>
-                    <dd>Lorem ipsum dolor sit amet. Same as <code>wm_group</code></dd>
-                    <dt id="colormapwindows">root.<b>colormapwindows</b>(string)</dt>
-                    <dd>Lorem ipsum dolor sit amet. Same as <code>wm_colormapwindows</code></dd>
-                    <dt id="command">root.<b>command</b>(string)</dt>
-                    <dd>Lorem ipsum dolor sit amet. Same as <code>wm_command</code></dd>
-                    <dt id="deiconify">root.<b>deiconify</b>(string)</dt>
-                    <dd>Deiconify the window. Same as <code>wm_deiconify</code></dd>
-                    <dt id="iconify">root.<b>iconify</b>(string)</dt>
-                    <dd>Iconify the window. Same as <code>wm_iconify</code></dd>
-                    <dt id="iconbitmap">root.<b>iconbitmap</b>(string)</dt>
-                    <dd>Lorem ipsum dolor sit amet. Same as <code>wm_iconbitmap</code></dd>
-                    <dt id="manage">root.<b>manage</b>(string)</dt>
-                    <dd>Lorem ipsum dolor sit amet. Same as <code>wm_manage</code></dd>
-                    <dt id="maxsize">root.<b>maxsize</b>(string)</dt>
-                    <dd>Lorem ipsum dolor sit amet. Same as <code>wm_maxsize</code></dd>
-                    <dt id="minsize">root.<b>minsize</b>(string)</dt>
-                    <dd>Lorem ipsum dolor sit amet. Same as <code>wm_minsize</code></dd>
-                    <dt id="overrideredirect">root.<b>overrideredirect</b>(bool)</dt>
-                    <dd>Lorem ipsum dolor sit amet. Same as <code>wm_overrideredirect</code></dd>
-                    <dt id="protocol">root.<b>protocol</b>(string)</dt>
-                    <dd>Lorem ipsum dolor sit amet. Same as <code>wm_protocol</code></dd>
-                    <dt id="transient">root.<b>transient</b>(string)</dt>
-                    <dd>Lorem ipsum dolor sit amet. Same as <code>wm_transient</code></dd>
-                    <dt id="title">root.<b>title</b>(string)</dt>
-                    <dd>Title of the window given as string. Same as <code>wm_title</code></dd>
-
-                </dl>
             </div>
-        </div>
-        <div class="column-nav">
-            <div class="card" id="chapters">
-                <h2 class="nav-title">Chapters</h2>
-                <ul class="nav-ul">
-                    <li><a href="#attributes">Attributes</a></li>
-                    <li><a href="#methods">Methods</a></li>
-                    <li><a href="#events">Events</a></li>
-                    <li><a href="#wm">Window manager</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <footer class="footer bg-dark">
-        <div>
-            <p>Copyright &copy; 2021 rdbende</p>
-        </div>
-        <div class="github">
-            <a href="https://github.com/rdbende/tkinter-docs/"><i class="fab fa-github fa-2x"></i></a>
-        </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <ul>
+            <li><p>Built with HTML5, CSS3, JavaScript</p></li>
+            <li><a href="github.com/rdbende">Built by rdbende</a></li>
+        </ul>
     </footer>
-    <script>
-        window.onscroll = function() {scrollFunc()};
-
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-
-        function scrollFunc() {
-          if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky");
-        } else {
-            navbar.classList.remove("sticky");
-        }
-    }
-
-    scrollFunc()
-</script>
+    <button onclick="scrollToTop()" class="top__button" id="topButton"></button>
+    <script type="text/javascript" src="https://rdbende.github.io/tkinter-docs/js/scroll_tracker.js"></script>
 </body>
 </html>
