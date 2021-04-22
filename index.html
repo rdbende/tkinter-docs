@@ -3,12 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tkinter docs. An awesome documentation page for tkinter.">
+    <meta name="author" content="rdbende">
     <link rel="stylesheet" type="text/css" href="https://rdbende.github.io/tkinter-docs/css/style.css">
     <title>Tkinter docs</title>
 </head>
 <body>
     <header class="navbar">
-        <a class="logo" href="https://rdbende.github.io/tkinter-docs/index.html" title="Home"><img src="https://rdbende.github.io/tkinter-docs/images/logo.png"></a>
+        <a class="logo" href="https://rdbende.github.io/tkinter-docs/index.html" title="Home"><img src="https://rdbende.github.io/tkinter-docs/images/logo.png" alt="Tkinter docs logo"></a>
         <ul>
             <li><a href="tutorials/" title="Go to tutorials">Tutorials</a></li>
             <li><a href="docs/" title="Go to documentations">Docs</a></li>
@@ -21,10 +23,11 @@
                 <p class="wip text--center">This site is a work in progress.</p>
                 <p>Well, if you are on this site, you probably know what it is, but you can read about it in detail here.</p>
                 <p>
-                <img src="images/tcltk_logo.png" style="float: left; margin: 5px 20px 0 0; height: 7em;">
-                Tkinter is Python's built-in standar GUI framework, which wraps the <em>tk</em> GUI toolkit. <em>Tk</em> is written in  <a href="https://en.wikipedia.org/wiki/Tcl" class="link" target="blank">Tcl</a> but also used in other languages (Python, Ruby, Perl). Tkinter is included with standard Windows, Linux and Mac installs of Python, so you don't need to install it separately, and it's cross-platform. It's name, <b>tkinter</b> is comes from the composition of <i>Tk + interface.</i>
+                <img src="images/tcltk_logo.png" class="img__floated" style="height: 7em;" alt="Tcl/Tk logo">
+                Tkinter is Python's built-in standard GUI framework, which wraps the <em>tk</em> GUI toolkit. <em>Tk</em> is written in  <a href="https://en.wikipedia.org/wiki/Tcl" class="link" title="What is Tcl?" target="blank">Tcl</a> but also used in other languages (Python, Ruby, Perl). Tkinter is included with standard Windows, Linux and Mac installs of Python, so you don't need to install it separately, and it's cross-platform. Unfortunately tkinter is very underrated, because it looks terrible by default, and many people use something else rathe than make it more beautiful.<br>
+                It's name, <b>tkinter</b> is comes from the composition of <i>Tk + interface.</i>
                 </p>
-                <h2 class="subtitle">A short introduction</h2>
+                <h2>A short introduction</h2>
                 <p>
                 Most of the time, the <code>tkinter</code> and the <code>ttk</code> modules are needed when using tkinter, but there are some accessories, such the <code>filedialog</code> and the <code>messagebox</code>.
                 </p>
@@ -35,11 +38,11 @@
                 There's a module, <code>tkinter.constants</code>, where all tkinter constants are defined that can be used for keywords, but of course we can also use strings. If you import tkinter this module is automatically imported, so you don't have do it separately.
                 </p>
                 <p>
-                And now a few words about importing, because many people (rightly) uses it incorrectly. If only tkinter is imported, you can make a well-functioning GUI, but you won't be satisfied with its appearance. It could be compared with <em>Windows 95</em>. It was not today, mainly not in design. Therefore, tkinter (ie <em>tk</em>) has an extension module, called <code>ttk</code>. With that you can make quite modern (platform dependent) looking apps. This appearance is native to the operating system, so it looks different from Windows and Mac. Unfortunately, on Linux there's not a big difference between the plain tkinter and the ttk widgets.
+                And now a few words about importing, because many people (rightly) uses it incorrectly. If only tkinter is imported, you can make a well-functioning GUI, but you won't be satisfied with its appearance. It could be compared with <em>Win95</em>. It was not today, mainly not in design. Therefore, tkinter (ie <em>tk</em>) has an extension module, called <code>ttk</code>. With that you can make quite modern (platform dependent) looking apps. This appearance is native to the operating system, so it looks different from Windows and Mac. Unfortunately, on Linux there's not a big difference between the plain tkinter and the ttk widgets.
                 </p>
                 <p>
                 Another good thing that in ttk can not only make native apps, but you able to set different themes (hence its name: <mark>t</mark>hemed <mark>tk</mark>).<br>
-                Last but not least, ttk also has some new widgets compared to tkinter, but others are missing from it, so pay attention to which module you are using for the widget. So return to imports. most of tkinter applications are starts as:
+                Last but not least, ttk also has some new widgets compared to tkinter, but others are missing from it, so pay attention to which module you are using for the widget. So return to imports. Most of tkinter applications are starts as:
                 </p>
 <pre>
 <span class="keyword">from</span> tkinter <span class="keyword">import</span> *
@@ -52,7 +55,7 @@
 <span class="keyword">from</span> tkinter <span class="keyword">import</span> ttk
 </pre>
                 <p>
-                Why? We import the first line by tkinter as <code>tk</code> to shorten its name. Second, we import ttk to make our app more professional. This is, on the one hand, for readability, this is <a href="https://www.python.org/dev/peps/pep-0020/" class="link" target="blank">very important</a> in Python. On the other hand, if we use a wildcard import with ttk, which is quite common:
+                Why? We import the first line by tkinter as <code>tk</code> to shorten its name. Second, we import ttk to make our app more professional. This is, on the one hand, for readability, this is <a href="https://www.python.org/dev/peps/pep-0020/" class="link" title="The Zen of Python | PEP 20" target="blank">very important</a> in Python. On the other hand, if we use a wildcard import with ttk, which is quite common:
                 </p>
 <pre>
 <span class="keyword">from</span> tkinter <span class="keyword">import</span> *
@@ -62,18 +65,19 @@
                 then the ttk widgets simply overwrite the tkinter widgets, which is sometimes not appropriate.
                 </p>
                 <p>Here can you navigate to the tkinter submodule docs:
-                <ul>
-                    <li><a href="#" class="link link--grey">colorchooser</a></li>
-                    <li><a href="#" class="link link--grey">commondialog</a></li>
-                    <li><a href="#" class="link link--grey">dnd</a></li>
-                    <li><a href="#" class="link link--grey">filedialog</a></li>
-                    <li><a href="#" class="link link--grey">font</a></li>
-                    <li><a href="#" class="link link--grey">messagebox</a></li>
-                    <li><a href="#" class="link link--grey">scrolledtext</a></li>
-                    <li><a href="#" class="link link--grey">tix</a></li>
-                </ul>
+                    <ul>
+                        <li><a href="#" class="link link--grey" title="A colorchooser dialog for tkinter">colorchooser</a></li>
+                        <li><a href="#" class="link link--grey" title="Dialog window templates for tkinter">commondialog</a></li>
+                        <li><a href="#" class="link link--grey" title="Preliminary (about 20 years) drag-n-drop capabilities for tkinter">dnd</a></li>
+                        <li><a href="#" class="link link--grey" title="File selection dialogs for tkinter">filedialog</a></li>
+                        <li><a href="#" class="link link--grey" title="Tkinter font object">font</a></li>
+                        <li><a href="#" class="link link--grey" title="Alert and info popups for tkinter">messagebox</a></li>
+                        <li><a href="#" class="link link--grey" title="Text widget along with a scrollbar">scrolledtext</a></li>
+                        <li><a href="#" class="link link--grey" title="Standard input dialogs for tkinter">simpledialog</a></li>
+                        <li><a href="#" class="link link--grey" title="Tix extension widgets for tkinter">tix</a></li>
+                    </ul>
                 </p>
-                <h2 class="subtitle">Notes</h2>
+                <h2>Notes</h2>
                 <p>
                 This site assumes that you're somewhat familiar with Python and that you're using Python 3, not Python 2. There are some significant differences between the two, including module naming, which is the first thing you'll encounter when trying tkinter.
                 </p>
@@ -85,7 +89,7 @@
                 </p>
                 </p>
                 <div class="text--center">
-                    <a href="https://rdbende.github.io/tkinter-docs/docs/"><button class="go__button">Go to the docs</button></a>
+                    <a href="https://rdbende.github.io/tkinter-docs/docs/" class="go__button" title="Go to the docs!">Go to the docs</a>
                 </div>
                 <p class="source"><a href="https://github.com/tcltk/tk" class="link" target="blank">Here</a> can you find the tcl/tk source code, and <a href="https://github.com/python/cpython/tree/master/Lib/tkinter/" class="link" target="blank">here is the tkinter</a></p>
             </article>
@@ -139,59 +143,11 @@
                     <li><a href="#">Style</a></li>
                     <li><a href="#">Text</a></li>
                     <li><a href="#">Tix</a></li>
-                    <li><a href="docs/tk.html">Tk</a></li>
+                    <li><a href="docs/tk/tk.html">Tk</a></li>
                     <li><a href="#">Toplevel</a></li>
                     <li><a href="#">Treeview</a></li>
                 </ul>
             </div>
-        </section>
-        <section style="overflow: auto;">
-            <h2 class="text--center">Tkinter vs PyQt</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Basis</th>
-                        <th>Tkinter</th>
-                        <th>PyQt</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>License</td>
-                        <td>Tk is available under BSD license, it's very liberal, and since tkinter is built in the standard Python library, it's free for any commercial use.</td>
-                        <td>PyQt is available under Riverbank Commercial License and GPLv3. If you do not wish to release your application under a GPL-compatible license, you must apply for a commercial license.</td>
-                    </tr>
-                    <tr>
-                        <td>Design</td>
-                        <td>Unfortunately tkinter has a really ugly appearance, but if you use ttk perhaps with <a href="https://github.com/TkinterEP/ttkthemes" class="link" target="blank">ttkthemes</a>, you can make it modern too!</td>
-                        <td>PyQt has a quite nice look, and you can easily style your widgets.</td>
-                    </tr>
-                    <tr>
-                        <td>Widgets</td>
-                        <td>Tkinter doesn't have many widgets by default (40, as I know), but you can create your own, or here's a nice package of several fantastic and useful widgets: <a href="https://github.com/TkinterEP/ttkwidget" class="link" target="blank">ttkwidgets</a>.</td>
-                        <td>PyQt has almost every imaginable widget with lots of useful features.</td>
-                    </tr>
-                    <tr>
-                        <td>Ease of understanding</td>
-                        <td>Tkinter is easy to understand and master. It doesn't have much complicated part and you don't need to write object-oriented code.</td>
-                        <td>PyQt requires a lot of time for understanding all the details. It's object oriented, so if you don’t know it, you have to learn it too.</td>
-                    </tr>
-                    <tr>
-                        <td>GUI builder</td>
-                        <td>Tkinter doesn't have any official GUI builder, but there's a nice GUI builder (made in tkinter): <a href="https://github.com/alejandroautalan/pygubu-designer" class="link" target="blank">Pygubu</a>.</td>
-                        <td>PyQt have a Qt Designer tool which we can use to build GUIs and then get the Python code.</td>
-                    </tr>
-                    <tr>
-                        <td>Installation</td>
-                        <td>It is included in the standard Python library, so no need to install it separately.</td>
-                        <td>You have to install PyQt separately, usually with pip.</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">If you want more comparison <a href="https://www.youtube.com/watch?v=Dby5jRoENlI" class="link" target="blank">here is</a> your video, from Alan D. Moore!
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
         </section>
     </main>
     <footer id="footer">
@@ -200,7 +156,7 @@
             <li><a href="https://github.com/rdbende">Built by rdbende</a></li>
         </ul>
     </footer>
-    <button onclick="scrollToTop()" class="top__button" id="topButton"></button>
+    <a onclick="scrollToTop()" class="top__button" id="topButton"></a>
     <script type="text/javascript" src="https://rdbende.github.io/tkinter-docs/js/scroll_tracker.js"></script>
     <script type="text/javascript" src="https://rdbende.github.io/tkinter-docs/js/search.js"></script>
 </body>

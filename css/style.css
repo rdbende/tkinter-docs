@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
   
@@ -53,6 +53,18 @@
   background-color: #aaa;
 }
 
+/* Animations */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 
 
 /* Types */
@@ -78,10 +90,11 @@ body {
   margin: 0;
   background: var(--bg-color);
   font-family: var(--text-font);
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.6;
   letter-spacing: 1px;
   color: var(--text-color);
+  animation: fadeIn 500ms ease-in;
 }
 
 body::before {
@@ -104,7 +117,7 @@ body::after {
   z-index: -100;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right, var(--accent-color), var(--primary-color));
+  background-image: linear-gradient(10deg, var(--accent-color), var(--primary-color));
   clip-path: circle(15% at right 30%);
 }
 
@@ -121,10 +134,9 @@ footer {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 70px;
+  height: 60px;
   margin-top: auto;
-  padding: 0 auto;
-  box-shadow: 0 0 20px 5px #3336;
+  padding-bottom: .5em;
   background-color: var(--medium-transparent);
   backdrop-filter: blur(var(--blur));
   user-select: none;
@@ -133,8 +145,7 @@ footer {
 footer p,
 footer a {
   display: block;
-  margin: 0 10px;
-  padding: 10px;
+  margin: auto 30px;
   font-size: 12pt;
   color: white;
   text-decoration: none;
@@ -152,8 +163,29 @@ footer ul {
 }
 
 h1 {
-  margin-bottom: 1em;
   font-size: 2em;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+* + h1,
+* + h2,
+* + h3 {
+  margin-top: 3em;
+  margin-bottom: 0;
+}
+
+h1 code {
+  margin-bottom: 1em;
 }
 
 p {
@@ -161,7 +193,17 @@ p {
   font-weight: 300;
 }
 
+b {
+  font-weight: 700;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 em {
+  font-weight: 500;
   font-style: normal;
   color: var(--primary-color);
 }
@@ -193,7 +235,8 @@ pre {
 }
 
 code {
-  padding: .3em .6em;
+  display: inline-block;
+  padding: .1em .6em;
   border-radius: 1em;
   background-color: var(--medium-color);
   font-family: var(--mono-font);
@@ -205,6 +248,10 @@ code {
 img {
   user-select: none;
   pointer-events: none;
+}
+
+img:not([alt]) {
+  filter: blur(var(--blur));
 }
 
 button {
@@ -227,10 +274,6 @@ input {
   transition: border 300ms;
 }
 
-input::placeholder {
-  color: var(--text-color);
-}
-
 input:hover {
   border-color: var(--light-color);
 }
@@ -238,7 +281,15 @@ input:hover {
 input:focus {
   border-color: var(--primary-color);
   outline: none;
-  transition: none;
+  transition: border 100ms;
+}
+
+input::placeholder {
+  color: var(--text-color);
+}
+
+ul {
+  padding: 1em 0 0 20px;
 }
 
 table {
@@ -251,6 +302,7 @@ table {
   border-collapse: separate;
   box-shadow: 0 0 20px 5px var(--shadow-color);
   background-color: var(--medium-transparent);
+
   color: var(--text-color);
   backdrop-filter: blur(var(--blur));
   cursor: default;
@@ -270,11 +322,12 @@ th {
 }
 
 td {
-  padding: .5em 1em;
+  padding: 1em 1em;
   border-left: 1px solid var(--light-color);
   border-top: 1px solid var(--light-color);
-  text-align: left;
+  font-size: .9em;
   font-weight: 300;
+  text-align: left;
 }
 
 td[colspan] {
@@ -319,7 +372,6 @@ tbody:last-child tr:last-child td:last-child {
   height: 90px;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0 20px 5px #3336;
   background-image: linear-gradient(to left, var(--accent-color), var(--primary-color));
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(110% - 1.5vw));
   user-select: none;
@@ -328,8 +380,8 @@ tbody:last-child tr:last-child td:last-child {
 .navbar a {
   display: block;
   margin: auto 10px;
-  padding: 10px;
-  font-weight: 700;
+  padding: 0 10px 10px 10px;
+  font-weight: 500;
   font-size: 14pt;
   color: white;
   text-decoration: none;
@@ -340,18 +392,20 @@ tbody:last-child tr:last-child td:last-child {
   color: var(--text-color);
 }
 
-.navbar ul {
-  display: flex;
-  list-style: none;
-}
-
 .navbar .logo {
   float: left;
+  padding-top: 10px;
   transition: transform 300ms;
 }
 
 .navbar .logo:hover {
   transform: scale(1.01) rotate(-1deg);
+}
+
+.navbar ul {
+  display: flex;
+  margin: auto 0;
+  list-style: none;
 }
 
 
@@ -364,22 +418,23 @@ tbody:last-child tr:last-child td:last-child {
   text-align: right;
 }
 
+.source a {
+  font-weight: 300;
+}
+
 .text--center {
   text-align: center;
 }
 
 .wip {
+  margin-top: 2em;
   font-weight: 700;
   color: var(--accent-color);
 }
 
-.subtitle {
-  margin-bottom: 3em;
-}
-
-p + .subtitle {
-  margin-top: 3em;
-  margin-bottom: 0;
+.img__floated {
+  float: left;
+  margin: 5px 20px 0 0;
 }
 
 
@@ -477,6 +532,7 @@ p + .subtitle {
   border: 1px transparent solid;
   border-radius: 6px;
   outline: none;
+  font-weight: 500;
   color: var(--text-color);
   text-decoration: none;
   transition: 300ms;
@@ -492,6 +548,7 @@ p + .subtitle {
 
 .nav__title {
   margin: 10px 0 30px 0;
+  font-weight: 500;
   text-align: center;
   user-select: none;
 }
@@ -506,6 +563,7 @@ p + .subtitle {
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: 0% 2px;
+  font-weight: 500;
   color: var(--primary-color);
   text-decoration: none;
   transition: background-size 50ms;
@@ -525,34 +583,44 @@ p + .subtitle {
 
 /* Buttons */
 
-.top__button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 100;
-  padding: 20px;
-  border-radius: 50%;
+.normal__button {
+  display: inline-block;
+  margin: 1em 0;
+  padding: 6px 12px;
+  border-radius: 1.5em;
+  border: 2px transparent solid;
   background-color: var(--primary-color);
-  transform: scale(0);
-  transition: 300ms;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: var(--text-font);
+  color: var(--text-color);
+  user-select: none;
+  transition: border 200ms ease-out;
+}
+
+.normal__button:hover {
+  border: 2px var(--light-color) solid;
 }
 
 .go__button {
   position: relative;
+  display: inline-block;
   margin-top: 1em;
-  padding: 7px 14px;
+  padding: 8px 14px;
   border-radius: 1.5em;
   background-image: linear-gradient(to left, var(--accent-color), var(--primary-color));
   font-size: 1em;
+  font-weight: 500;
   font-family: var(--text-font);
   color: var(--text-color);
+  user-select: none;
   transition: padding 200ms ease-out;
 }
 
 .go__button::after {
   content: '';
   position: absolute;
-  top: 40%;
+  top: 50%;
   right: 1em;
   display: inline-block;
   width: .5em;
@@ -561,7 +629,7 @@ p + .subtitle {
   border-color: var(--light-color);
   border-style: solid;
   opacity: 0;
-  transform: rotate(-45deg) translateY(-10%);
+  transform: rotate(-45deg) translateY(-50%);
   transition: all 200ms ease-out;
 }
 
@@ -572,6 +640,20 @@ p + .subtitle {
 
 .go__button:hover {
   padding-right: 40px;
+}
+
+.top__button {
+  position: fixed;
+  display: block;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  user-select: none;
+  transform: scale(0);
+  transition: 300ms;
 }
 
 
@@ -727,11 +809,11 @@ p + .subtitle {
 }
 
 @media screen and (max-width: 768px) {
-  .navbar a {
-    display: none;
-  }
-
   .navbar {
+    top: -80px;
+    height: 150px;
+    flex-direction: column;
+    background-image: linear-gradient(-50deg, var(--accent-color), var(--primary-color));
     clip-path: none;
   }
 

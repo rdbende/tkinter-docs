@@ -26,7 +26,6 @@ function searchDocsOnPage() {
     var ul = document.getElementById("searchUl");
     var li = ul.getElementsByTagName("li");
     var i;
-    console.log("hívva")
 
     for (i = 0; i < li.length; i++) {
         var a = li[i].getElementsByTagName("a")[0];

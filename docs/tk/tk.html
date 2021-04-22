@@ -3,12 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tk is basically the main window of tkinter. Creating a tk.Tk instance initializes the tcl/tk interpreter and creates the root window.">
+    <meta name="author" content="rdbende">
     <link rel="stylesheet" type="text/css" href="https://rdbende.github.io/tkinter-docs/css/style.css">
     <title>tk.Tk | Tkinter docs</title>
 </head>
 <body>
     <header class="navbar">
-        <a class="logo" href="https://rdbende.github.io/tkinter-docs/index.html" title="Home"><img src="https://rdbende.github.io/tkinter-docs/images/logo.png"></a>
+        <a class="logo" href="https://rdbende.github.io/tkinter-docs/index.html" title="Home"><img src="https://rdbende.github.io/tkinter-docs/images/logo.png" alt="Tkinter docs logo"></a>
         <ul>
             <li><a href="https://rdbende.github.io/tkinter-docs/tutorials/" title="Go to tutorials">Tutorials</a></li>
             <li><a href="https://rdbende.github.io/tkinter-docs/docs/" title="Go to documentations">Docs</a></li>
@@ -17,12 +19,10 @@
     <main>
         <section class="content-sidebar">
             <article class="card card--intro">
-
                 <h1><code>tk.Tk</code></h1>
-
                 <p>Tk is basically the main window of tkinter. Creating a <code>tk.Tk</code> instance initializes the <code>tcl/tk</code> interpreter and creates the root window. If you don't explicitly create it, one will be implicitly created when you create your first widget. It will be stored in a global variable called <code>_default_root</code>. If a widget doesn't have a parent specified than it will automatically have this instance as its parent.</p>
 
-                <h2 class="subtitle text--center" id="methods_section">Methods</h2>
+                <h2 class="text--center" id="methods_section">Methods</h2>
 
                 <div class="doc__card">
                     <div class="code__doc">
@@ -43,7 +43,7 @@
                         <div class="code__desc">
                             <span class="code__name"><code>-alpha</code></span>
                             <span class="code__type">float</span>
-                            <div class="code__desc">Controls the window opacity from <code>0.0</code>(transparent) to <code>1.0</code>(opaque). Unfortunately, this not only controls the transparency of the window content, but also the titlebar and windo border, so the application can look quite weird. May not work on many Linux systems.</div>
+                            <div class="code__desc">Controls the window opacity from <code>0.0</code>(transparent) to <code>1.0</code>(opaque). Unfortunately, this not only controls the transparency of the window content, but also the titlebar and window border, so the application can look quite weird. May not work on many Linux systems.</div>
 
                             <span class="code__name"><code>-disabled</code></span>
                             <span class="code__type">bool</span>
@@ -112,9 +112,9 @@
                     <div class="code__doc">
                         <span class="code__name" id="aspect">.deiconify()</span>
                         <div class="code__desc">
-                            <p>Deiconify the window. On Windows also gives it focus.</p>
+                            <p>Deiconify the window.</p>
                         </div>
-                        <p>Same as <code>wm_title</code></p>
+                        <p>Same as <code>wm_deiconify</code></p>
                     </div>
                 </div>
 
@@ -127,7 +127,7 @@
                             <p>If you want to specify just the x and y position then pass <code>"+300+300"</code> to the argument, of course with your own values. It's important that the + sign is not left out from the beginning of the string.</p>
                             <p>And of course you can define all the 4 values the same time. <code>"300x300+300+300"</code></p>
                         </div>
-                        <p>Same as <code>wm_title</code></p>
+                        <p>Same as <code>wm_geometry</code></p>
                     </div>
                 </div>
 
@@ -137,7 +137,7 @@
                         <div class="code__desc">
                             <p>Iconify the window, so it'll appear as an icon on the taskbar/dock.</p>
                         </div>
-                        <p>Same as <code>wm_title</code></p>
+                        <p>Same as <code>wm_iconify</code></p>
                     </div>
                 </div>
                 
@@ -168,7 +168,7 @@
             <li><a href="https://github.com/rdbende">Built by rdbende</a></li>
         </ul>
     </footer>
-    <button onclick="scrollToTop()" class="top__button" id="topButton"></button>
+    <a onclick="scrollToTop()" class="top__button" id="topButton"></a>
     <script type="text/javascript" src="https://rdbende.github.io/tkinter-docs/js/scroll_tracker.js"></script>
 </body>
 </html>
