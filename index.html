@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" translate="no">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,91 +12,75 @@
     <header class="navbar">
         <a class="logo" href="https://rdbende.github.io/tkinter-docs/index.html" title="Home"><img src="https://rdbende.github.io/tkinter-docs/images/logo.png" alt="Tkinter docs logo"></a>
         <ul>
-            <li><a href="tutorials/" title="Go to tutorials">Tutorials</a></li>
-            <li><a href="docs/" title="Go to documentations">Docs</a></li>
+            <li><a href="tutorials/" title="Detailed descriptions and tutorials">Tutorials</a></li>
+            <li><a href="docs/" title="Tkinter widgets reference">Docs</a></li>
         </ul>
     </header>
     <main>
         <section class="content-sidebar">
             <article class="card card--intro">
-                <h1>What is Tkinter?</h1>
-                <p class="wip text--center">This site is a work in progress.</p>
-                <p>Well, if you are on this site, you probably know what it is, but you can read about it in detail here.</p>
+                <h1 class="main__title text--center">What is Tkinter?</h1>
+                <span class="wip"></span>
                 <p>
-                <img src="images/tcltk_logo.png" class="img__floated" style="height: 7em;" alt="Tcl/Tk logo">
-                Tkinter is Python's built-in standard GUI framework, which wraps the <em>tk</em> GUI toolkit. <em>Tk</em> is written in  <a href="https://en.wikipedia.org/wiki/Tcl" class="link" title="What is Tcl?" target="blank">Tcl</a> but also used in other languages (Python, Ruby, Perl). Tkinter is included with standard Windows, Linux and Mac installs of Python, so you don't need to install it separately, and it's cross-platform. Unfortunately tkinter is very underrated, because it looks terrible by default, and many people use something else rathe than make it more beautiful.<br>
-                It's name, <b>tkinter</b> is comes from the composition of <i>Tk + interface.</i>
-                </p>
-                <h2>A short introduction</h2>
-                <p>
-                Most of the time, the <code>tkinter</code> and the <code>ttk</code> modules are needed when using tkinter, but there are some accessories, such the <code>filedialog</code> and the <code>messagebox</code>.
+                    Well, if you’re on this site, you probably know what it is, but you can read about it in detail here.
                 </p>
                 <p>
-                The <em>tk</em> interface itself is located in a binary module called <code>_tkinter</code>. This module contains the low-level interface to <em>tk</em>, and should never be used directly by application programmers. It is usually a shared library, or DLL, but might in some cases be statically linked with the Python interpreter.
+                    <img src="images/tcltk_logo.png" class="img__floated" style="height: 7em;" alt="Tcl/Tk logo">
+                    Tkinter is Python's built-in standard GUI framework, which is a wrapper around the <em>Tk</em> GUI toolkit. <em>Tk</em> is written in the <a href="https://en.wikipedia.org/wiki/Tcl" class="link" title="What is Tcl?" target="blank">Tcl language</a> but also used in other languages (Python, Ruby, Perl) and obviously the <mark>Tk</mark> <mark>inter</mark>face is the module that gives us access to that. Tkinter is included with standard Windows, Linux and Mac installs of Python, so you don't need to install it separately, and it's cross-platform. Tkinter is really easy to learn really easy to use, but it looks terrible by default.
+                </p>
+                <h3>A short introduction</h3>
+                <p>
+                    Most of the time, the <code>tkinter</code> and the <code>ttk</code> modules are needed when using tkinter, but there are some accessories, such as the <code>filedialog</code> and the <code>messagebox</code>.
                 </p>
                 <p>
-                There's a module, <code>tkinter.constants</code>, where all tkinter constants are defined that can be used for keywords, but of course we can also use strings. If you import tkinter this module is automatically imported, so you don't have do it separately.
+                    The <em>tk</em> interface itself is located in a binary module called <code>_tkinter</code>. This module contains the low-level interface to <em>tk</em>, and should never be used directly by application programmers. It is usually a shared library, or DLL, but might in some cases be statically linked with the Python interpreter.
                 </p>
                 <p>
-                And now a few words about importing, because many people (rightly) uses it incorrectly. If only tkinter is imported, you can make a well-functioning GUI, but you won't be satisfied with its appearance. It could be compared with <em>Win95</em>. It was not today, mainly not in design. Therefore, tkinter (ie <em>tk</em>) has an extension module, called <code>ttk</code>. With that you can make quite modern (platform dependent) looking apps. This appearance is native to the operating system, so it looks different from Windows and Mac. Unfortunately, on Linux there's not a big difference between the plain tkinter and the ttk widgets.
+                    There is a module, <code>tkinter.constants</code>, where all tkinter constants are defined that can be used for keywords, but of course we can also use strings instead. If you import tkinter, this module will be automatically imported, so you don't have to do it separately.
+                </p>
+                <h3>Hello, ttk!</h3>
+                <p>
+                    If you’ve ever created a tkinter app, you know it looks awful. Its appearance could be compared with <em>Win95</em>. It was not today, mainly not in design. Therefore, tkinter (ie <em>tk</em>) has an extension module, called <code>ttk</code>. With that, you can make quite modern (platform-dependent) looking apps. This appearance is native to the operating system, so it looks different from Windows and Mac. Unfortunately, on Linux, there's not a big difference between the plain tkinter and the ttk widgets.
                 </p>
                 <p>
-                Another good thing that in ttk can not only make native apps, but you able to set different themes (hence its name: <mark>t</mark>hemed <mark>tk</mark>).<br>
-                Last but not least, ttk also has some new widgets compared to tkinter, but others are missing from it, so pay attention to which module you are using for the widget. So return to imports. Most of tkinter applications are starts as:
+                    Another good thing that with ttk you able to set different themes (hence its name: <mark>t</mark>hemed <mark>tk</mark>). So if you’re not happy with the look of your app, you can create your own theme, or use great libraries like <a href="https://github.com/TkinterEP/ttkthemes" class="link" title="ttkthemes at TkinterEP">ttkthemes</a> or <a href="https://github.com/israel-dryer/ttkbootstrap" class="link" title="ttkbootstrap by Israel Dryer">ttkbootstrap</a>, for theming it easily.<br>
+                    Last but not least, ttk also has some new widgets compared to tkinter, but others are missing from it, so pay attention to which module you are using for the widget.
+                <h3>Importing</h3>
+                <p>
+                    And then now a few words about importing, as many people don’t use it completely correctly. Most tkinter apps begin like this:
                 </p>
-<pre>
+<pre class="python__code">
 <span class="keyword">from</span> tkinter <span class="keyword">import</span> *
 </pre>       
                 <p>
-                but a "well-done" tkinter app should begin like this:
+                    this is enough for a hello world program, but not good at other times, especially if you use ttk. We recommend this import form:
                 </p>
-<pre>
+<pre class="python__code">
 <span class="keyword">import</span> tkinter <span class="keyword">as</span> tk
 <span class="keyword">from</span> tkinter <span class="keyword">import</span> ttk
 </pre>
                 <p>
-                Why? We import the first line by tkinter as <code>tk</code> to shorten its name. Second, we import ttk to make our app more professional. This is, on the one hand, for readability, this is <a href="https://www.python.org/dev/peps/pep-0020/" class="link" title="The Zen of Python | PEP 20" target="blank">very important</a> in Python. On the other hand, if we use a wildcard import with ttk, which is quite common:
-                </p>
-<pre>
-<span class="keyword">from</span> tkinter <span class="keyword">import</span> *
-<span class="keyword">from</span> tkinter.ttk <span class="keyword">import</span> *
-</pre>
+                    Ok, but why? At the first line we import tkinter as <code>tk</code>, to shorten its name, but keep the namespace for better <a href="https://www.python.org/dev/peps/pep-0020/" class="link" title="The Zen of Python | PEP 20" target="blank">readability</a>.  import the first line by tkinter as <code>tk</code> to shorten its name. Second, we import ttk to make our app more <b>professional</b>.
+                <h3>Notes for using this site</h3>
                 <p>
-                then the ttk widgets simply overwrite the tkinter widgets, which is sometimes not appropriate.
-                </p>
-                <p>Here can you navigate to the tkinter submodule docs:
-                    <ul>
-                        <li><a href="#" class="link link--grey" title="A colorchooser dialog for tkinter">colorchooser</a></li>
-                        <li><a href="#" class="link link--grey" title="Dialog window templates for tkinter">commondialog</a></li>
-                        <li><a href="#" class="link link--grey" title="Preliminary (about 20 years) drag-n-drop capabilities for tkinter">dnd</a></li>
-                        <li><a href="#" class="link link--grey" title="File selection dialogs for tkinter">filedialog</a></li>
-                        <li><a href="#" class="link link--grey" title="Tkinter font object">font</a></li>
-                        <li><a href="#" class="link link--grey" title="Alert and info popups for tkinter">messagebox</a></li>
-                        <li><a href="#" class="link link--grey" title="Text widget along with a scrollbar">scrolledtext</a></li>
-                        <li><a href="#" class="link link--grey" title="Standard input dialogs for tkinter">simpledialog</a></li>
-                        <li><a href="#" class="link link--grey" title="Tix extension widgets for tkinter">tix</a></li>
-                    </ul>
-                </p>
-                <h2>Notes</h2>
-                <p>
-                This site assumes that you're somewhat familiar with Python and that you're using Python 3, not Python 2. There are some significant differences between the two, including module naming, which is the first thing you'll encounter when trying tkinter.
+                    This site assumes that you're somewhat familiar with Python and that you're using Python 3, not Python 2. There are some significant differences between the two, including module naming, which is the first thing you'll encounter when trying tkinter.
                 </p>
                 <p>
-                We do not use plain tkinter widgets in our tutorials, only if it is specifically needed, and I recommend this to anyone who uses tkinter.
+                    We don't use plain tkinter widgets in our tutorials, only if it's specifically needed, and I recommend this to anyone who uses tkinter.
                 </p>
                 <p>
-                At this site we use tkinter as <em>tk</em>, and ttk as <em>ttk</em> you probably already know why.
-                </p>
+                    At this site, we use tkinter as <em>tk</em>, and ttk as <em>ttk</em> you probably already know why.
                 </p>
                 <div class="text--center">
-                    <a href="https://rdbende.github.io/tkinter-docs/docs/" class="go__button" title="Go to the docs!">Go to the docs</a>
+                    <a href="docs/" class="accent__button" title="Go to the docs!">Go to the docs</a><br>
                 </div>
-                <p class="source"><a href="https://github.com/tcltk/tk" class="link" target="blank">Here</a> can you find the tcl/tk source code, and <a href="https://github.com/python/cpython/tree/master/Lib/tkinter/" class="link" target="blank">here is the tkinter</a></p>
+                <p class="source">
+                    <a href="https://github.com/tcltk/tk" class="link" target="blank">Here</a> can you find the tcl/tk source code, and <a href="https://github.com/python/cpython/tree/master/Lib/tkinter/" class="link" target="blank">here is the tkinter</a>
+                </p>
             </article>
             <div class="card card--search">
                 <h2 class="nav__title">Find docs quickly</h2>
-                <input type="text" id="searchBar" oncontextmenu="return false" onkeyup="searchDocsInNavbar()" placeholder="Search" title="Search the docs">
-
+                <input type="text" id="searchBar" oncontextmenu="return false" onkeyup="searchDocsInNavbar()" placeholder="Search" title="Search the docs" style="margin-bottom: 2em;">
                 <ul class="search__ul" id="searchUl">
                     <li><a href="#">BitmapImage</a></li>
                     <li><a href="#">BooleanVar</a></li>
@@ -157,7 +141,7 @@
         </ul>
     </footer>
     <a onclick="scrollToTop()" class="top__button" id="topButton"></a>
-    <script type="text/javascript" src="https://rdbende.github.io/tkinter-docs/js/scroll_tracker.js"></script>
-    <script type="text/javascript" src="https://rdbende.github.io/tkinter-docs/js/search.js"></script>
+    <script src="https://rdbende.github.io/tkinter-docs/js/scroll_tracker.js"></script>
+    <script src="https://rdbende.github.io/tkinter-docs/js/search.js"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="https://rdbende.github.io/tkinter-docs/css/style.css">
     <title>Widget documentations | Tkinter docs</title>
 </head>
-<body onload="scrollFunc()">
+<body onload="scrollFunc(); searchDocsOnLoad()">
     <header class="navbar">
         <a class="logo" href="https://rdbende.github.io/tkinter-docs/index.html" title="Home"><img src="https://rdbende.github.io/tkinter-docs/images/logo.png" alt="Tkinter docs logo"></a>
         <ul>
@@ -18,7 +18,10 @@
     </header>
     <main>
         <section class="card">
-            <input type="text" id="searchBar" oncontextmenu="return false" onkeyup="searchDocsOnPage()" placeholder="Search" title="Search the docs" autofocus>
+            <div class="flex docs--page">
+                <input type="text" id="searchBar" oncontextmenu="return false" onkeyup="searchDocsOnPage()" placeholder="Search" title="Search the docs" autofocus>
+                <label id="resultNumber"></label>
+            </div>
             <ul class="link__ul" id="searchUl">
                 <li><a href="#">
                     <div class="card link__card">
@@ -28,7 +31,7 @@
                 </a></li>
                 <li><a href="#">
                     <div class="card link__card">
-                        <p class="link__title">tk.BooleanVar
+                        <p class="link__title">tk.BooleanVar - Control variable
                         <p class="link__desc">Control variable with boolean value</p>
                     </div>
                 </a></li>
@@ -88,7 +91,7 @@
                 </a></li>
                 <li><a href="#">
                     <div class="card link__card">
-                        <p class="link__title">tk.DoubleVar
+                        <p class="link__title">tk.DoubleVar - Control variable
                         <p class="link__desc">Control variable with float value</p>
                     </div>
                 </a></li>
@@ -148,7 +151,7 @@
                 </a></li>
                 <li><a href="#">
                     <div class="card link__card">
-                        <p class="link__title">tk.IntVar
+                        <p class="link__title">tk.IntVar - Control variable
                         <p class="link__desc">Control variable with integer value</p>
                     </div>
                 </a></li>
@@ -346,7 +349,7 @@
                 </a></li>
                 <li><a href="#">
                     <div class="card link__card">
-                        <p class="link__title">tk.StringVar
+                        <p class="link__title">tk.StringVar - Control variable
                         <p class="link__desc">Control variable with string value</p>
                     </div>
                 </a></li>
@@ -354,6 +357,12 @@
                     <div class="card link__card">
                         <p class="link__title">ttk.Style
                         <p class="link__desc">Ttk style object for styling widgets</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <div class="card link__card">
+                        <p class="link__title">tk.Tcl
+                        <p class="link__desc">Interfacing with tcl</p>
                     </div>
                 </a></li>
                 <li><a href="#">
@@ -396,7 +405,7 @@
         </ul>
     </footer>
     <a onclick="scrollToTop()" class="top__button" id="topButton"></a>
-    <script type="text/javascript" src="https://rdbende.github.io/tkinter-docs/js/scroll_tracker.js"></script>
-    <script type="text/javascript" src="https://rdbende.github.io/tkinter-docs/js/search.js"></script>
+    <script src="https://rdbende.github.io/tkinter-docs/js/scroll_tracker.js"></script>
+    <script src="https://rdbende.github.io/tkinter-docs/js/search.js"></script>
 </body>
 </html>
