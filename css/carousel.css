@@ -1,13 +1,15 @@
 .carousel {
   position: relative;
   border-radius: 5px;
+  margin: 0 80px;
+  padding-top: 60px;
+  max-width: 1600px;
 }
 
 .slideshow-container {
-  max-width: 1000px;
   position: relative;
-  border-radius: 5px;
   z-index: 2;
+  border-radius: 5px;
 }
 
 .slide {
@@ -41,7 +43,7 @@
 .carousel__description {
   overflow: auto;
   position: relative;
-  background-color: var(--dark-color);
+  background-color: var(--medium-transparent);
   font-size: 15px;
   margin-top: -19px;
   padding: 40px 30px 30px;

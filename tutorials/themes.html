@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn how to make tkinter look better. Using modern ttk themes, and the ttkthemes package.">
+    <meta name="description" content="You can easily make tkinter look modern. Learn how to use themes in tkinter, and the ttkthemes package.">
     <meta name="author" content="rdbende">
     <link rel="stylesheet" type="text/css" href="https://rdbende.github.io/tkinter-docs/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://rdbende.github.io/tkinter-docs/css/mariana.css">
@@ -27,24 +27,31 @@
     </nav>
     it would be better if it were a collapsible hamburger menu, it takes up too much space now
     -->
-    <main>
-        <section class="main__content">
-            <article class="card card--docu">
-                <h1>Using themes in Tkinter</h1>
-
+    
+    
+    <main id="tut">
+        <div class="banner__container">
+            <img class="banner__image" src="https://rdbende.github.io/tkinter-docs/images/theme_banner.png" alt="a">
+            <div class="text__container">
+                <h1>Using themes in tkinter</h1>
                 <p>
-                    Tkinter looks terrible by default.<br><br>But you can easily make it look modern. Never heard of it? Not surprising, no one talks about this. But now you can learn it!
+                    Tkinter looks terrible by default.<br>But you can easily make it look modern. Never heard of it? Not surprising, no one talks about it, but now you can learn it!
                 </p>
-                <h3>So, how can you modernize tkinter?</h3>
-                <p>
+            </div>
+            
+        </div>
+        <section class="main__content">
+            <article class="card tut--card" id="main__card">
+                <h1 class="main__title text--center">So, how can I use themes in tkinter?</h1>
+                <p style="margin-left: 20px;">
                     There are mainly two options:
 
-                    <ul>
+                    <ul style="margin-left: 20px;">
                         <li>
                             Using a <code>Style</code> object to set one of the built-in or third-party themes, or
                         </li>
                         <li>
-                            Using the <a class="link" href="https://github.com/TkinterEP/ttkthemes">ttkthemes</a> package, which contains many different themes, and makes them much easier to use
+                            Using the <a class="link" href="https://github.com/TkinterEP/ttkthemes">ttkthemes</a> package, which contains many different themes, and makes them really easy to use
                         </li>
                     </ul>
                 </p>
@@ -56,7 +63,7 @@
                     <h3>Using the built-in themes</h3>
 
                     <p>
-                        Ttk has built-in themes that are available on all os, but there are also platform specific themes.
+                        Ttk has built-in themes that are available on all OS, but there are also platform specific themes.
                         <table class="doc--table">
                             <thead>
                                 <tr>
@@ -141,6 +148,8 @@ root.tk.call("package", "require", "awdark")
 
 style.theme_use("awdark")
 </code></pre>
+                    </div>
+                    <div class="card doc--card">
 
                     <h2>Using the ttkthemes package</h2>
 

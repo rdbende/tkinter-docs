@@ -101,33 +101,14 @@ body {
   animation: fadeIn 300ms ease-in;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -100;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(150deg, var(--accent-color), var(--accent-color-100));
-  clip-path: circle(13% at left 99%);
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -100;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to bottom, var(--primary-color), var(--primary-color-100));
-  clip-path: circle(18% at right 6%);
-}
-
 main {
   width: 100%;
-  padding: 25px 50px;
+  padding: 120px 40px 50px 40px;
+}
+
+main#tut {
+  padding: 0;
+  padding-bottom: 50px;
 }
 
 footer {
@@ -473,6 +454,7 @@ tbody:last-child tr:last-child td:last-child {
 /* Navbar */
 
 .navbar {
+  position: absolute;
   top: 0;
   left: 0;
   display: flex;
@@ -483,7 +465,7 @@ tbody:last-child tr:last-child td:last-child {
   align-items: center;
   background-color: var(--medium-transparent);
   box-shadow: 0 0 20px 5px var(--shadow-color);
-  /*backdrop-filter: blur(var(--blur)); /* Firefox doesn't supports it by default :( */
+  backdrop-filter: blur(var(--blur)); /* Firefox doesn't supports it by default :( */
   user-select: none;
 }
 
@@ -605,6 +587,7 @@ tbody:last-child tr:last-child td:last-child {
   margin: 30px;
   padding: 30px;
   overflow: hidden;
+  max-width: 1600px;
   border: 1px solid var(--light-transparent);
   border-radius: var(--radius);
   box-shadow: 0 0 20px 5px var(--shadow-color);
@@ -614,11 +597,11 @@ tbody:last-child tr:last-child td:last-child {
 }
 
 .simple__card {
-  margin: 30px 0;
+  margin: 30px 80px;
   padding: 30px;
   overflow: hidden;
   color: var(--text-color);
-  background-color: var(--dark-color);
+  background-color: var(--medium-transparent);
   border-radius: var(--radius);
 }
 
@@ -630,6 +613,17 @@ tbody:last-child tr:last-child td:last-child {
 
 .doc--card {
   margin: 3rem 0 0;
+}
+
+.tut--card {
+  margin: 0 80px;
+  padding-top: 60px;
+}
+
+#main__card {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 500ms, opacity 500ms;
 }
 
 .card--ohno {
@@ -1038,6 +1032,37 @@ tbody:last-child tr:last-child td:last-child {
   content: url(icons/mac.svg);
 }
 */
+
+.banner__container {
+  position: relative;
+  top: 0;
+  z-index: -100;
+  width: 100%;
+}
+
+.banner__image {
+  width: 100%;
+  height: auto;
+  mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
+}
+
+.banner__container .text__container {
+  position: absolute;
+  top: 60%;
+  left: 100px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.banner__container div h1 {
+  margin: 0;
+  font-size: 40pt;
+  max-width: 16ch;
+}
+
+.banner__container div p {
+  max-width: 40ch;
+}
 
 
 /* Media queries */
