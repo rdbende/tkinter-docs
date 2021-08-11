@@ -1,0 +1,108 @@
+.carousel {
+  position: relative;
+  border-radius: 5px;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.slide {
+  animation: fade 300ms ease;
+}
+
+.slide img {
+  border-radius: var(--radius);
+}
+
+#prev, #next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 20px;
+  transition: 300ms ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+  transform: translateY(-50%);
+}
+
+#next {
+  right: -1px;
+  border-radius: 5px 0 0 5px;
+}
+
+#prev:hover, #next:hover {
+  background-color: var(--dark-color);
+}
+
+.carousel__description {
+  overflow: auto;
+  position: relative;
+  background-color: var(--dark-color);
+  font-size: 15px;
+  margin-top: -19px;
+  padding: 40px 30px 30px;
+  width: 100%;
+  color: var(--text-color);
+  border-radius: 0px 0px var(--radius) var(--radius);
+}
+
+.carousel__description p {
+  max-width: 60ch;
+}
+
+.carousel__description table {
+  margin-bottom: 0;
+}
+
+.visit__button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: inline-block;
+  margin: 1em 0;
+  padding: 8px 14px;
+  border: 1px solid var(--light-transparent);
+  border-radius: 1.5em;
+  box-shadow: 0 0 5px 3px var(--shadow-color);
+  background-image: linear-gradient(to right, var(--accent-color-100), var(--primary-color));
+  background-size: 110%; /* To avoid glitching */
+  background-position: center;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: var(--text-font);
+  color: var(--text-color);
+  user-select: none;
+}
+
+@keyframes fade {
+  from {filter: brightness(60%)} 
+  to {filter: brightness(100%)}
+}
+
+.dot {
+  position: relative;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px #777 solid;
+}
+
+.variants__selector {
+  user-select: none;
+  position: absolute;
+  background-color: #eee;
+  border-radius: 5px;
+  bottom: 20px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  padding-bottom: 6px;
+  box-shadow: 0 0 10px 2px var(--shadow-color);;
+}

@@ -1,0 +1,85 @@
+:root {
+  --blue: hsl(210, 50%, 60%);
+  --blue2: hsl(209, 13%, 35%);
+  --blue3: hsl(210, 15%, 24%);
+  --blue4: hsl(210, 13%, 45%);
+  --blue5: hsl(180, 36%, 54%);
+  --blue6: hsl(221, 12%, 69%);
+  --green: hsl(114, 31%, 68%);
+  --grey: hsl(0, 0%, 20%);
+  --orange: hsl(32, 93%, 66%);
+  --orange2: hsl(32, 85%, 55%);
+  --orange3: hsl(40, 94%, 68%);
+  --pink: hsl(300, 30%, 68%);
+  --red: hsl(357, 79%, 65%);
+  --red2: hsl(13, 93%, 66%);
+  --white: hsl(0, 0%, 97%);
+  --white2: hsl(219, 28%, 88%);
+}
+
+pre {
+	background-color: var(--blue3);
+}
+
+code[class*="language-"] {
+	all: unset;
+	background-color: var(--blue3);
+}
+
+.token.comment {
+	color: var(--blue6);
+}
+
+.token.punctuation {
+	color: var(--white3);
+}
+
+.punctuation-real {
+	color: var(--blue6);
+}
+
+.token.magfunc {
+	color: var(--blue);
+	font-style: italic;
+}
+
+.token.function {
+	color: var(--blue5);
+}
+
+.token.kw-constant,
+.token.bi-pseudo,
+.token.boolean {
+	color: var(--red);
+	font-style: italic;
+}
+
+.token.method,
+.token.variable {
+	color: var(--blue);
+}
+
+.token.class,
+.token.number{
+	color: var(--orange);
+}
+
+.token.keyword,
+.token.scope {
+	color: var(--pink);
+}
+
+.token.builtin,
+.token.decorator,
+.token.exception {
+	color: var(--blue);
+}
+
+.token.string {
+	color: var(--green);
+}
+
+.token.operator {
+	color: var(--red2);
+}
+

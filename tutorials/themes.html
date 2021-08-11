@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to make tkinter look better. Using modern ttk themes, and the ttkthemes package.">
+    <meta name="author" content="rdbende">
+    <link rel="stylesheet" type="text/css" href="https://rdbende.github.io/tkinter-docs/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://rdbende.github.io/tkinter-docs/css/mariana.css">
+    <title>Themes in tkinter | Tkinter docs</title>
+</head>
+<body>
+    <header class="navbar">
+        <a class="logo" href="https://rdbende.github.io/tkinter-docs/index.html" title="Home"><img src="https://rdbende.github.io/tkinter-docs/images/logo.png" alt="Tkinter docs logo"></a>
+        <ul>
+            <li><a href="https://rdbende.github.io/tkinter-docs/resources/" title="Go to resources">Resources</a></li>
+            <li><a href="https://rdbende.github.io/tkinter-docs/tutorials/" title="Go to tutorials">Tutorials</a></li>
+            <li><a href="https://rdbende.github.io/tkinter-docs/docs/" title="Go to documentations">Docs</a></li>
+        </ul>
+    </header>
+    <!--<nav>
+        <ul>
+            <a href="#builtin_section"><li class="active">Built-in themes</li></a>
+            <a href="#3party_section"><li>Third party themes</li></a>
+            <a href="#ttkthemes_section"><li>ttkthemes</li></a>
+        </ul>
+    </nav>
+    it would be better if it were a collapsible hamburger menu, it takes up too much space now
+    -->
+    <main>
+        <section class="main__content">
+            <article class="card card--docu">
+                <h1>Using themes in Tkinter</h1>
+
+                <p>
+                    Tkinter looks terrible by default.<br><br>But you can easily make it look modern. Never heard of it? Not surprising, no one talks about this. But now you can learn it!
+                </p>
+                <h3>So, how can you modernize tkinter?</h3>
+                <p>
+                    There are mainly two options:
+
+                    <ul>
+                        <li>
+                            Using a <code>Style</code> object to set one of the built-in or third-party themes, or
+                        </li>
+                        <li>
+                            Using the <a class="link" href="https://github.com/TkinterEP/ttkthemes">ttkthemes</a> package, which contains many different themes, and makes them much easier to use
+                        </li>
+                    </ul>
+                </p>
+
+                <div class="card doc--card">
+
+                    <h2>Theming with a Style object</h2>
+
+                    <h3>Using the built-in themes</h3>
+
+                    <p>
+                        Ttk has built-in themes that are available on all os, but there are also platform specific themes.
+                        <table class="doc--table">
+                            <thead>
+                                <tr>
+                                    <th>All platform</th>
+                                    <th>Only Windows</th>
+                                    <th>Only Mac OS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>alt</li>
+                                            <li>clam</li>
+                                            <li>classic</li>
+                                            <li>default</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>vista</li>
+                                            <li>winnative</li>
+                                            <li>xpnative</li>
+                                        </ul>
+                                    </td>
+                                    <td>aqua</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        Theese themes aren't really fancy, but if you want a native looking GUI, the builtins are the best.
+                    </p>
+                    <p>
+                        If you want to use a builtin theme, you don't need to do too much
+<pre>
+<code class="language-python">style = ttk.Style()
+
+style.theme_use("clam")  # clam is a quite nice theme
+</code></pre> 
+                    </p>
+
+                    <h3>Using a tcl theme file</h3>
+
+                    <p>
+                        If you have a theme with a single tcl file, you have to import it with tcl calls. You can do it on any tkinter widget, here we use the root window for this purpose. A full list of third-party themes can be found <a class="link" href="https://rdbende.github.io/tkinter-docs/resources/list-of-ttk-themes.html">here</a>.
+                    </p>
+                    <p>
+                        To import the file we can use the <code>source</code> keyword. After which we put the path of our file.
+                    </p>
+                    <p>
+                        Now this file gets executed, just like a Python script, and it created a theme that we can set just like a built-in theme.
+                    </p>
+
+<pre>
+<code class="language-python">style = ttk.Style()
+
+root.tk.call("source", "azure.tcl")
+
+style.theme_use("azure")
+</code></pre>
+
+                    <h3>Using a theme package</h3>
+
+                    <p>
+                        There are packages that contain multiple themes, such as awthemes and scid themes. They contain a <code>pkgIndex.tcl</code> file, which is quite the same as <code>__init__.py</code>in python. 
+                    </p>
+                    <p>
+                        First, we need to add the path of this folder into Tcl's auto_path (same, as <code>sys.path</code> in python).
+<pre>
+<code class="language-tcl">lappend auto_path "path/to/awthemes")
+</code></pre> 
+                    </p>
+                    <p>
+                        Then we can just simply import a theme from the package, in this case <code>awdark</code>. Now, that the theme is created, we can set the theme as in the other cases. Fiunally the code looks like this:
+                    </p>
+
+<pre>
+<code class="language-python">style = ttk.Style()
+
+root.tk.call("lappend"," "auto_path", "path/to/awthemes")
+
+root.tk.call("package", "require", "awdark")
+
+style.theme_use("awdark")
+</code></pre>
+
+                    <h2>Using the ttkthemes package</h2>
+
+                    <p>
+                        The ttkthemes package gives you more than 30 different themes (most of them are pretty ugly), collected from different creators, and you can dinamically modify them, if you want to tweak it at runtime.
+                    </p>
+                    <p>
+                        Ttkthemes is a quite popular package, and it has several very useful features, on which you can find detailed documentation <a class="link" href="https://ttkthemes.readthedocs.io/en/latest/index.html">here</a>.
+                    </p>
+                    <p>
+                        The installation is very straightforward. Just one pip command, and all the themes are installed on your machine.
+                    </p>
+
+<pre>
+<code class="language-none">pip install ttkthemes
+</code></pre>
+
+                    </p>
+
+                    <h3>Usage of ttkthemes</h3>
+
+                    <p>
+                        Now let’s see how you can use it.<br>We don't even have to import tkinter anymore, because everything that's needed from it is included in ttkthemes. We will use ttk widgets, because remember, only these can be themed.
+
+                    </p>
+                    <p>
+                        We'll use the <code>ThemedTk</code> object instead of <code>tkinter.Tk</code>, this allows us to easily set the appearance of the entire tkinter app.
+                    </p>
+
+                    <p>If you are interested in what themes are available in ttkthemes, you can easily find out with
+<pre>
+<code class="language-python">print(root.get_themes())
+</code></pre>
+                    where <code>root</code> is the ThemedTk instance.
+                    </p>
+                    <p>
+                        You can set the application theme with a parameter when creating the ThemedTk instance, or use the set_theme method for this purpose. Of course, you can change theme using the <code>config</code> method, or you can query the current theme using <code>cget</code>.
+                    </p>
+
+<pre>
+<code class="language-python">from tkinter import ttk
+from ttkthemes import ThemedTk
+
+root = ThemedTk(theme="arc")
+
+button = ttk.Button(root, text="Quit", command=lambda: root.config(theme="breeze"))
+button.pack(pady=20)
+
+root.mainloop()
+</code></pre>
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer id="footer">
+        <ul>
+            <li><p>Built with HTML5, CSS3, JavaScript</p></li>
+            <li><a href="https://github.com/rdbende">Built by rdbende</a></li>
+        </ul>
+    </footer>
+    <a onclick="scrollToTop()" class="top__button" id="topButton"></a>
+    <script src="https://rdbende.github.io/tkinter-docs/js/scroll_tracker.js"></script>
+    <script src="https://rdbende.github.io/tkinter-docs/js/highlight.js"></script>
+</body>
+</html>

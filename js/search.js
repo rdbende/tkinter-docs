@@ -1,37 +1,18 @@
-function searchDocsInNavbar() {
-    // This function is searches in the navbar <li> elements
-    var input = document.getElementById("searchBar");
-    var search = input.value.toUpperCase();
-    var ul = document.getElementById("searchUl");
-    var li = ul.getElementsByTagName("li");
-
-    for (i = 0; i < li.length; i++) {
-        var a = li[i].getElementsByTagName("a")[0];
-        var txtValue = a.textContent || a.innerText;
-
-        if (txtValue.toUpperCase().indexOf(search) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-
 function searchDocsOnPage() {
     // This function searches only in the title of the cards,
-    // also only in the part after the module name
-    var input = document.getElementById("searchBar");
-    var search = input.value.toLowerCase();
-    var ul = document.getElementById("searchUl");
-    var li = ul.getElementsByTagName("li");
-    var resultLabel = document.getElementById("resultNumber");
-    var visibles = 0;
+    // also only in the part after the namespace name
+    let input = document.getElementById("searchBar");
+    let search = input.value.toLowerCase();
+    let ul = document.getElementById("searchUl");
+    let li = ul.getElementsByTagName("li");
+    let resultLabel = document.getElementById("resultNumber");
+    let visibles = 0;
 
     for (i = 0; i < li.length; i++) {
-        var a = li[i].getElementsByTagName("a")[0];
-        var div = a.getElementsByTagName("div")[0];
-        var title = div.getElementsByClassName("link__title")[0];
-        var txtValue = title.innerHTML.split(".")[1] || title.innerHTML;
+        let a = li[i].getElementsByTagName("a")[0];
+        let div = a.getElementsByTagName("div")[0];
+        let title = div.getElementsByClassName("link__title")[0];
+        let txtValue = title.innerHTML.split(".")[1] || title.innerHTML;
         
 
         if (txtValue.toLowerCase().indexOf("no result!") > -1) {
@@ -54,7 +35,7 @@ function searchDocsOnPage() {
         ul.appendChild(noResult);
     }
 
-    if (li.length != visibles & visibles != 0) {
+    if (li.length != visibles & visibles > 0) {
         if (visibles > 1) {
             resultLabel.innerHTML = visibles + " results";
         } else {
@@ -66,7 +47,7 @@ function searchDocsOnPage() {
 }
 
 function searchDocsOnLoad() {
-    var input = document.getElementById("searchBar");
+    let input = document.getElementById("searchBar");
     const searchString = window.location.search;
     const parameters = new URLSearchParams(searchString);
     input.value = parameters.get('q').toLowerCase();

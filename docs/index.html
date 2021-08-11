@@ -12,390 +12,407 @@
     <header class="navbar">
         <a class="logo" href="https://rdbende.github.io/tkinter-docs/index.html" title="Home"><img src="https://rdbende.github.io/tkinter-docs/images/logo.png" alt="Tkinter docs logo"></a>
         <ul>
+            <li><a href="https://rdbende.github.io/tkinter-docs/resources/" title="Go to resources">Resources</a></li>
             <li><a href="https://rdbende.github.io/tkinter-docs/tutorials/" title="Go to tutorials">Tutorials</a></li>
             <li><a href="https://rdbende.github.io/tkinter-docs/docs/" title="Go to documentations">Docs</a></li>
         </ul>
     </header>
     <main>
-        <section class="card">
-            <div class="flex docs--page">
-                <input type="text" id="searchBar" oncontextmenu="return false" onkeyup="searchDocsOnPage()" placeholder="Search" title="Search the docs" autofocus>
-                <label id="resultNumber"></label>
+        <section>
+            <div class="card">
+                <div class="flex">
+                    <input type="text" id="searchBar" onkeyup="searchDocsOnPage()" placeholder="Search" title="Search the docs" autofocus>
+                    <label id="resultNumber"></label>
+                </div>
             </div>
-            <ul class="link__ul" id="searchUl">
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.BitmapImage</p>
-                        <p class="link__desc">Loading and manipulating bitmaps</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.BooleanVar - Control variable
-                        <p class="link__desc">Control variable with boolean value</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.Button
-                        <p class="link__desc">A simple but ugly button</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.Button
-                        <p class="link__desc">A quite nice button</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.Canvas
-                        <p class="link__desc">A canvas for drawing</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.Checkbutton
-                        <p class="link__desc">Checkbox for on/off</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.Checkbutton
-                        <p class="link__desc">Themeable checkbox</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.Combobox
-                        <p class="link__desc">Combo dropdown</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tkinter.commondialog
-                        <p class="link__desc">Dialog window templates</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tkinter.colorchooser
-                        <p class="link__desc">Colorchooser dialog for tkinter</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tkinter.dnd
-                        <p class="link__desc">Drag-n-drop capabilities for tkinter</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.DoubleVar - Control variable
-                        <p class="link__desc">Control variable with float value</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.Entry
-                        <p class="link__desc">Inline text input</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.Entry
-                        <p class="link__desc">Ttk's inline text input</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">Events
-                        <p class="link__desc">Keyboard and widget events</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tkinter.filedialog
-                        <p class="link__desc">File selection dialogs</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tkinter.font
-                        <p class="link__desc">Tkinter font object</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">Fontchooser
-                        <p class="link__desc">An unimplemented fontchooser</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.Frame
-                        <p class="link__desc">Basic container for other widgets</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.Frame
-                        <p class="link__desc">Basic container for other widgets</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">Grid - geometry manager
-                        <p class="link__desc">Grid-ish geometry manager</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.IntVar - Control variable
-                        <p class="link__desc">Control variable with integer value</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.Label
-                        <p class="link__desc">Display inline text</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.Label
-                        <p class="link__desc">Display inline text</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.LabelFrame
-                        <p class="link__desc">Container with label</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.LabelFrame
-                        <p class="link__desc">Themeable labelframe</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.LabeledScale
-                        <p class="link__desc">Themed scale with value display</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.Listbox
-                        <p class="link__desc">List of items</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">Menus
-                        <p class="link__desc">Basic tkinter menu widget</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.Menubutton
-                        <p class="link__desc">Button with popup menu</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.Menubutton
-                        <p class="link__desc">Themeable menubutton</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.Message
-                        <p class="link__desc">Multiline text display</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tkinter.messagebox
-                        <p class="link__desc">Alert and info popups</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.Notebook
-                        <p class="link__desc">Collection of frames with tab</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.OptionMenu
-                        <p class="link__desc">Button for select from a popup menu</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.OptionMenu
-                        <p class="link__desc">Themeable optionmenu</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.PanedWindow
-                        <p class="link__desc">Resizable panes</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.PanedWindow
-                        <p class="link__desc">Resizable panes</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">Pack - geometry manager
-                        <p class="link__desc">Pack widgets to the screen</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.PhotoImage
-                        <p class="link__desc">Loading and manipulating photos</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">Place - geometry manager
-                        <p class="link__desc">Geometry manager for coordinate system</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.Progressbar
-                        <p class="link__desc">Widget for show a progress</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.Radiobutton
-                        <p class="link__desc">Select from multiple options</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.Radiobutton
-                        <p class="link__desc">Themeable radiobutton</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.Scale
-                        <p class="link__desc">Tkinter's slider widget</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.Scale
-                        <p class="link__desc">Ttk's slider widget</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.Scrollbar
-                        <p class="link__desc">Scrollbar for your app</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.Scrollbar
-                        <p class="link__desc">Themeable scrollbar</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tkinter.scrolledtext
-                        <p class="link__desc">Text widget along with a scrollbar</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.Separator
-                        <p class="link__desc">Separator for organizing layouts</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tkinter.simpledialog
-                        <p class="link__desc">Standard input dialogs</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.Sizegrip
-                        <p class="link__desc">Sizegrip for resizing widgets</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.Spinbox
-                        <p class="link__desc">Select from a range of values</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.Spinbox
-                        <p class="link__desc">Themeable spinbox</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.StringVar - Control variable
-                        <p class="link__desc">Control variable with string value</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.Style
-                        <p class="link__desc">Ttk style object for styling widgets</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.Tcl
-                        <p class="link__desc">Interfacing with tcl</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.Text
-                        <p class="link__desc">Textbox for edit multiline text</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tkinter.tix
-                        <p class="link__desc">Tix extension widgets for tkinter</p>
-                    </div>
-                </a></li>
-                <li><a href="tk/tk.html">
-                    <div class="card link__card">
-                        <p class="link__title">tk.Tk
-                        <p class="link__desc">Tkinter's main window and initializer</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">tk.Toplevel
-                        <p class="link__desc">A top level window</p>
-                    </div>
-                </a></li>
-                <li><a href="#">
-                    <div class="card link__card">
-                        <p class="link__title">ttk.Treeview
-                        <p class="link__desc">Treeview for hierarchy and tables</p>
-                    </div>
-                </a></li>
-            </ul>
+            <div class="card">
+                <ul class="link__ul" id="searchUl">
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.BitmapImage</p>
+                            <p class="link__desc">Loading and manipulating bitmaps</p>
+                        </div>
+                    </a></li>
+
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.BooleanVar - Control variable</p>
+                            <p class="link__desc">Control variable with boolean value</p>
+                        </div>
+                    </a></li>
+
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.Button</p>
+                            <p class="link__desc">A simple and ugly button</p>
+                        </div>
+                    </a></li>
+
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.Button</p>
+                            <p class="link__desc">A quite nice button</p>
+                        </div>
+                    </a></li>
+
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.Canvas</p>
+                            <p class="link__desc">A canvas for drawing</p>
+                        </div>
+                    </a></li>
+
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.Checkbutton</p>
+                            <p class="link__desc">Checkbox for on/off</p>
+                        </div>
+                    </a></li>
+
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.Checkbutton</p>
+                            <p class="link__desc">Themeable checkbox</p>
+                        </div>
+                    </a></li>
+
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.Combobox</p>
+                            <p class="link__desc">Combo dropdown</p>
+                        </div>
+                    </a></li>
+
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tkinter.commondialog</p>
+                            <p class="link__desc">Dialog window templates</p>
+                        </div>
+                    </a></li>
+
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tkinter.colorchooser</p>
+                            <p class="link__desc">Colorchooser dialog for tkinter</p>
+                        </div>
+                    </a></li>
+
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tkinter.dnd</p>
+                            <p class="link__desc">Drag-n-drop capabilities for tkinter</p>
+                        </div>
+                    </a></li>
+
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.DoubleVar - Control variable</p>
+                            <p class="link__desc">Control variable with float value</p>
+                        </div>
+                    </a></li>
+
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.Entry</p>
+                            <p class="link__desc">Inline text input</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.Entry</p>
+                            <p class="link__desc">Ttk's inline text input</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">Events</p>
+                            <p class="link__desc">Keyboard and widget events</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tkinter.filedialog</p>
+                            <p class="link__desc">File selection dialogs</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tkinter.font</p>
+                            <p class="link__desc">Tkinter font object</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">Fontchooser</p>
+                            <p class="link__desc">An unimplemented fontchooser</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.Frame</p>
+                            <p class="link__desc">Basic container for other widgets</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.Frame</p>
+                            <p class="link__desc">Basic container for other widgets</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">Grid - geometry manager</p>
+                            <p class="link__desc">Grid-ish geometry manager</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.IntVar - Control variable</p>
+                            <p class="link__desc">Control variable with integer value</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.Label</p>
+                            <p class="link__desc">Display inline text</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.Label</p>
+                            <p class="link__desc">Display inline text</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.LabelFrame</p>
+                            <p class="link__desc">Container with label</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.LabelFrame</p>
+                            <p class="link__desc">Themeable labelframe</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.LabeledScale</p>
+                            <p class="link__desc">Themed scale with value display</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.Listbox</p>
+                            <p class="link__desc">List of items</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">Menus</p>
+                            <p class="link__desc">Basic tkinter menu widget</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.Menubutton</p>
+                            <p class="link__desc">Button with popup menu</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.Menubutton</p>
+                            <p class="link__desc">Themeable menubutton</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.Message</p>
+                            <p class="link__desc">Multiline text display</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tkinter.messagebox</p>
+                            <p class="link__desc">Alert and info popups</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.Notebook</p>
+                            <p class="link__desc">Collection of frames with tab</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.OptionMenu</p>
+                            <p class="link__desc">Button for select from a popup menu</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.OptionMenu</p>
+                            <p class="link__desc">Themeable optionmenu</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.PanedWindow</p>
+                            <p class="link__desc">Resizable panes</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.PanedWindow</p>
+                            <p class="link__desc">Resizable panes</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">Pack - geometry manager</p>
+                            <p class="link__desc">Pack widgets to the screen</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.PhotoImage</p>
+                            <p class="link__desc">Loading and manipulating photos</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">Place - geometry manager</p>
+                            <p class="link__desc">Geometry manager for coordinate system</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.Progressbar</p>
+                            <p class="link__desc">Widget for show a progress</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.Radiobutton</p>
+                            <p class="link__desc">Select from multiple options</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.Radiobutton</p>
+                            <p class="link__desc">Themeable radiobutton</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.Scale</p>
+                            <p class="link__desc">Tkinter's slider widget</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.Scale</p>
+                            <p class="link__desc">Ttk's slider widget</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.Scrollbar</p>
+                            <p class="link__desc">Scrollbar for your app</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.Scrollbar</p>
+                            <p class="link__desc">Themeable scrollbar</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tkinter.scrolledtext</p>
+                            <p class="link__desc">Text widget along with a scrollbar</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.Separator</p>
+                            <p class="link__desc">Separator for organizing layouts</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tkinter.simpledialog</p>
+                            <p class="link__desc">Standard input dialogs</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.Sizegrip</p>
+                            <p class="link__desc">Sizegrip for resizing widgets</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.Spinbox</p>
+                            <p class="link__desc">Select from a range of values</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.Spinbox</p>
+                            <p class="link__desc">Themeable spinbox</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.StringVar - Control variable</p>
+                            <p class="link__desc">Control variable with string value</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">ttk.Style</p>
+                            <p class="link__desc">Ttk style object for styling widgets</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.Tcl</p>
+                            <p class="link__desc">Interfacing with tcl</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.Text</p>
+                            <p class="link__desc">Textbox for edit multiline text</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tkinter.tix</p>
+                            <p class="link__desc">Tix extension widgets for tkinter</p>
+                        </div>
+                    </a></li>
+                    <li><a href="tk/tk.html">
+                        <div class="card link__card">
+                            <p class="link__title">tk.Tk</p>
+                            <p class="link__desc">Tkinter's main window and initializer</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card">
+                            <p class="link__title">tk.Toplevel</p>
+                            <p class="link__desc">A top level window</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="card link__card" style="margin-bottom: 0;"><!--todo: better hack-->
+                            <p class="link__title">ttk.Treeview</p>
+                            <p class="link__desc">Treeview for hierarchy and tables</p>
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer id="footer">

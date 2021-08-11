@@ -1,7 +1,7 @@
 window.onscroll = function() {scrollFunc()};
 
-var topButton = document.getElementById("topButton");
-var footer = document.getElementById("footer");
+let topButton = document.getElementById("topButton");
+let footer = document.getElementById("footer");
 
 function footerInViewport() {
     const rect = footer.getBoundingClientRect();
@@ -16,7 +16,7 @@ function scrollFunc() {
     }
 
     if (footerInViewport()) {
-        topButton.style.bottom = "90px";
+        topButton.style.bottom = "100px";
     } else {
         topButton.style.bottom = "20px";
     }

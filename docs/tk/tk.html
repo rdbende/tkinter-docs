@@ -12,18 +12,35 @@
     <header class="navbar">
         <a class="logo" href="https://rdbende.github.io/tkinter-docs/index.html" title="Home"><img src="https://rdbende.github.io/tkinter-docs/images/logo.png" alt="Tkinter docs logo"></a>
         <ul>
+            <li><a href="https://rdbende.github.io/tkinter-docs/resources/" title="Go to resources">Resources</a></li>
             <li><a href="https://rdbende.github.io/tkinter-docs/tutorials/" title="Go to tutorials">Tutorials</a></li>
             <li><a href="https://rdbende.github.io/tkinter-docs/docs/" title="Go to documentations">Docs</a></li>
         </ul>
     </header>
+    <!--<nav>
+        <ul>
+            <a onclick="scrollToChapter('attributes_section')"><li class="active">Attributes</li></a>
+            <a onclick="scrollToChapter('methods_section')"><li>Methods</li></a>
+            <a onclick="scrollToChapter('events_section')"><li>Events</li></a>
+        </ul>
+    </nav>-->
     <main>
-        <section class="content-sidebar docs">
+        <section class="main__content">
             <article class="card card--docu">
-                <h1><code>tk.Tk</code></h1>
-                <span class="tldr">tk.Tk is basically the main window in tkinter.</span>
-                <p>Creating a <code>tk.Tk</code> instance initializes the <code>tcl/tk</code> interpreter and creates the root window. If you don't explicitly create it, one will be implicitly created when you create your first widget. It will be stored in a global variable called <code>_default_root</code>. If a widget doesn't have a parent specified than it will automatically have this instance as its parent.</p>
+                <h1><span class="widget__class">tk.Tk</span></h1>
+                <p>Creating a <code>tk.Tk</code> instance initializes the <code>tcl/tk</code> interpreter and creates the root window. If you don't explicitly create it, one will be implicitly created when you create your first widget. The first tk.Tk instance will be stored in a global variable called <code>_default_root</code>. If a widget doesn't have a parent specified than it will automatically have this instance as its parent.</p>
 
-                <h2 class="text--center" id="methods_section">Methods</h2>
+                <a id="arguments_section"></a>
+                <h2 class="text--center">Arguments</h2>
+
+                <div class="doc__card">
+                    <div class="code__doc">
+                        empty
+                    </div>
+                </div>
+
+                <a id="methods_section"></a>
+                <h2 class="text--center">Methods</h2>
 
                 <div class="doc__card">
                     <div class="code__doc">
@@ -152,7 +169,7 @@
                             </div>
                             <span class="code__name"><code>-zoomed</code></span>
                             <span class="code__type">bool</span>
-                            <div class="code__desc">Controls whether the window is in zoomed state (because <code>.state('zoomed')</code> doesn't work on X11)</div>
+                            <div class="code__desc">Controls whether the window is in zoomed state (because <code>.state('zoomed')</code> doesn't work with X11)</div>
                         </div>
                         <p>Same as <code>wm_attributes</code></p>
                     </div>
@@ -174,7 +191,7 @@
                         <div class="code__desc">
                             <p>The function takes a single parameter as attribute, the geometry must be specified as a single string, yep, this solution  is kinda weird. The syntax is: "<em>width</em>x<em>height</em>+<em>x</em>+<em>y</em>" as one single string.</p>
                             <p>If you want to specify just the width and height then pass <code>"300x300"</code> to the argument, of course with your own values.</p>
-                            <p>If you want to specify just the x and y position then pass <code>"+300+300"</code> to the argument, of course with your own values. It's important that the + sign is not left out from the beginning of the string.</p>
+                            <p>If you want to specify just the x and y position then pass <code>"+300+300"</code> to the argument, of course with your own values. It's important to not left out the + from the beginning of the string.</p>
                             <p>And of course you can define all the 4 values the same time. <code>"300x300+300+300"</code></p>
                         </div>
                         <p>Same as <code>wm_geometry</code></p>
@@ -200,16 +217,16 @@
                         <p>Same as <code>wm_title</code></p>
                     </div>
                 </div>
-                
+
+                <a id="events_section"></a>
+                <h2 class="text--center">Events</h2>
+
+                <div class="doc__card">
+                    <div class="code__doc">
+                        empty
+                    </div>
+                </div>
             </article>
-            <div class="card card--nav">
-                <h2 class="nav__title">Chapters</h2>
-                <ul class="search__ul" id="searchUl">
-                    <li><a href="#attributes_section">Attributes</a></li>                    
-                    <li><a href="#methods_section">Methods</a></li>
-                    <li><a href="#events_section">Events</a></li>
-                </ul>
-            </div>
         </section>
     </main>
     <footer id="footer">
