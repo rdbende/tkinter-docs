@@ -1,0 +1,107 @@
+ <!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the first and probably the last tutorial in the world on how to make a ttk theme.">
+    <meta name="author" content="rdbende">
+    <link rel="stylesheet" type="text/css" href="https://rdbende.github.io/tkinter-docs/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://rdbende.github.io/tkinter-docs/css/mariana.css">
+    <title>Creating ttk themes | Tkinter docs</title>
+</head>
+<body>
+    <header class="navbar">
+        <a class="logo" href="https://rdbende.github.io/tkinter-docs/index.html" title="Home"><img src="https://rdbende.github.io/tkinter-docs/images/logo.png" alt="Tkinter docs logo"></a>
+        <ul>
+            <li><a href="https://rdbende.github.io/tkinter-docs/resources/" title="Go to resources">Resources</a></li>
+            <li><a href="https://rdbende.github.io/tkinter-docs/tutorials/" title="Go to tutorials">Tutorials</a></li>
+            <li><a href="https://rdbende.github.io/tkinter-docs/docs/" title="Go to documentations">Docs</a></li>
+        </ul>
+    </header>
+    <main id="tut">
+        <div class="banner__container">
+            <img class="banner__image" src="https://rdbende.github.io/tkinter-docs/images/theme_banner.png" alt="a">
+            <div class="text__container">
+                <h1>Creating a ttk theme</h1>
+                <p>
+                    This is the <b>first</b> and probably the last tutorial in the world on how to make a ttk theme.
+                </p>
+            </div>
+            
+        </div>
+        <section class="main__content">
+            <article class="card tut--card" id="main__card">
+                <h1 class="main__title text--center">Creating a ttk theme</h1>
+                <h4>Warning: This page is far from ready, currently very incomplete and not very helpful</h4>
+                <p style="margin-left: 20px;">
+                    You'll need:
+
+                    <ul style="margin-left: 20px;">
+                        <li>
+                            <a class="link", href="https://inkscape.org/release/inkscape-1.1/", target="_blank">Inkscape</a>, or some other usable graphic design software
+                        </li>
+                        <li>
+                            Some kind of familiarity with the <a class="link", href="https://learnxinyminutes.com/docs/tcl/", target="_blank">Tcl</a> programming language
+                        </li>
+                    </ul>
+                </p>
+
+                <div class="card doc--card">
+
+                    <h3>Getting started</h3>
+
+                    <p>
+                        In this tutorial we'll create a ttk theme and by the end you will learn a lot of tips and tricks about them. We'll make this theme in Tcl, because although it's possible in Python with the <code>ttk.Style</code> object, it has a couple of bugs and an awful idiot syntax, so I don't recommend it.
+                    </p>
+                    <p>
+                        Ttk themes are not dynamically rendered, so we can’t just tell to Tk what we want and then it does it for us. Instead, we create images in Inkscape (or in another program) and export them as png images, then import them into Tk and apply them to the widgets.
+                    </p>
+                    <p>
+                        
+                    </p>
+
+                    <h3>Let's get into it</h3>
+                    <p>
+                        First, start by calling <code>theme create</code>, which will actually create the theme.
+                    </p>
+                    <pre>
+<code class="language-tcl">ttk::style theme create some_nice_theme_name -parent clam
+</code></pre>
+                    <p>
+                        Usually we use a process like this to load the images into the <code>images</code> variable, which is a dictionary. Later we can access this images from this dict.
+                    </p>
+                    <pre>
+<code class="language-tcl">proc load_images {imgdir} {
+    variable images
+    foreach file [glob -directory $imgdir *.png] {
+        set images([file tail [file rootname $file]]) \
+        [image create photo -file $file -format png]
+    }
+}
+
+# And then run the process, to load them
+load_images [file join [file dirname [info script]] your_image_dir]
+</code></pre>
+                    <p>
+                        The script will go through the <code>imgdir</code> library, and create a photo image from each of them.
+                    </p>
+
+                    <p>
+                        Currently I don't have time to write this tutorial, so you should look into <a href="https://github.com/rdbende/Sun-Valley-ttk-theme" class="link">my Sun Valley theme</a> and learn the rest from the source code.
+                    </p>
+                    
+                    </div>
+            </article>
+        </section>
+    </main>
+    <footer id="footer">
+        <ul>
+            <li><p>Built with HTML5, CSS3, JavaScript</p></li>
+            <li><a href="https://github.com/rdbende">Built by rdbende</a></li>
+        </ul>
+    </footer>
+    <a onclick="scrollToTop()" class="top__button" id="topButton"></a>
+    <script src="https://rdbende.github.io/tkinter-docs/js/scroll_tracker.js"></script>
+    <script src="https://rdbende.github.io/tkinter-docs/js/highlight.js"></script>
+</body>
+</html>
