@@ -41,42 +41,64 @@
 }
 
 .carousel__description {
-  overflow: auto;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 0fr);
+  grid-auto-flow: row;
+  grid-template-areas:
+    "title button"
+    "description description"
+    "table table";
   background-color: var(--medium-transparent);
   font-size: 15px;
-  margin-top: -19px;
-  padding: 40px 30px 30px;
+  margin-top: -20px;
+  padding: 50px 40px 40px;
   width: 100%;
   color: var(--text-color);
   border-radius: 0px 0px var(--radius) var(--radius);
 }
 
+.carousel__description * {
+  margin: 0;
+}
+
+.carousel__description .visit__button {
+  grid-area: button;
+  justify-self: end;
+  align-self: start;
+}
+
+.carousel__description h3 {
+  grid-area: title;
+  justify-self: start;
+  align-self: start;
+}
+
 .carousel__description p {
-  max-width: 60ch;
+  grid-area: description;
+  margin-top: 20px;
+  max-width: 65ch;
+  justify-self: start;
+  align-self: start;
 }
 
 .carousel__description table {
-  margin-bottom: 0;
+  grid-area: table;
+  margin-top: 20px;
+  justify-self: start;
 }
 
 .visit__button {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  display: inline-block;
-  margin: 1em 0;
-  padding: 8px 14px;
+  padding: 10px 16px;
   border: 1px solid var(--light-transparent);
-  border-radius: 1.5em;
+  border-radius: 10px;
   box-shadow: 0 0 5px 3px var(--shadow-color);
-  background-image: linear-gradient(to right, var(--accent-color-100), var(--primary-color));
-  background-size: 110%; /* To avoid glitching */
-  background-position: center;
+  background-color: #57c8ff;
+  color: #000;
   font-size: 1em;
   font-weight: 500;
   font-family: var(--text-font);
-  color: var(--text-color);
   user-select: none;
 }
 
@@ -90,7 +112,7 @@
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: 0 4px;
   border-radius: 50%;
   display: inline-block;
   border: 1px #777 solid;
@@ -104,7 +126,7 @@
   bottom: 20px;
   margin-left: 50%;
   transform: translateX(-50%);
-  padding: 10px;
-  padding-bottom: 6px;
-  box-shadow: 0 0 10px 2px var(--shadow-color);;
+  padding: 14px;
+  padding-bottom: 10px;
+  box-shadow: 0 0 10px 2px var(--shadow-color);
 }

@@ -27,7 +27,7 @@ window.addEventListener("keydown", keyFunc);
 
 function changeImage(image) {
   const slides = document.querySelectorAll(".slide");
-  slides[slideIndex-1].querySelector("img").src = image; 
+  slides[slideIndex-1].querySelector("img").src = image;
 }
 
 function showSlides(n) {
@@ -48,5 +48,5 @@ function showSlides(n) {
   }
 
   slides[slideIndex-1].style.display = "block";
-  carouselDescription[slideIndex-1].style.display = "block";
+  carouselDescription[slideIndex-1].style.display = "grid";
 }
